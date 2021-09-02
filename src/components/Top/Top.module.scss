@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.top {
+	position: relative;
+
+  margin-bottom: 24px;
+} 
+.top > * {
+	position: relative;
+	z-index: 1;
+}
+.topHeader {
+	margin-bottom: 17px;
+
+	@media(min-width: 992px) {
+		margin-bottom: 25px;
+	}
+	@media(min-width: 1200px) {
+		margin-bottom: 45px;
+	}
+}
+.topWordBreak {
+	display: block;
+
+	@media(min-width: 768px) {
+		display: inline;
+	}
+}
+.topImg {
+	position: absolute;
+	top: 3px;
+	right: -55px;
+	z-index: 0;
+
+	display: block;
+	width: 110px;
+	height: 115px;
+
+	@media(min-width: 768px) {
+		width: 200px;
+		height: 210px;
+	}
+	@media(min-width: 992px) {
+		width: 400px;
+		height: 419px;
+	}
+	@media(min-width: 1200px) {
+		top: 100px;
+		left: 50%;
+
+		margin-left: 185px;
+		width: 577px;
+		height: 605px;
+	}
+}

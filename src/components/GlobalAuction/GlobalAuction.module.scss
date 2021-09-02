@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.globalAuction {
+  
+}
+.globalAuctionList {
+	display: flex;
+	flex-wrap: wrap;
+}
+.globalAuctionItem {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+	width: 25%;
+}
+
+
+// Item
+
+.Item {
+	position: relative;
+}
+.ItemImg {
+	display: block;
+	width: 100%;
+}
+.ItemBody {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100%;
+
+	opacity: 0;
+
+	transition: all 0.4s;
+}
+.Item:hover .ItemBody {
+	z-index: 1;
+
+	opacity: 1;
+	background: radial-gradient(100% 96.75% at 0% 100%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+	box-shadow: 5px 5px 30px rgba(183, 41, 168, 0.5);
+
+	transition: all 0.4s;
+}

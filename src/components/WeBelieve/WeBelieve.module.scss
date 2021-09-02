@@ -1,0 +1,83 @@
+@import '../../styles/variables.scss';
+
+.weBelieve {
+  margin-bottom: 68px;
+
+	@media(min-width: 768px) {
+		margin-bottom: 100px;
+	}
+	@media(min-width: 992px) {
+		margin-bottom: 150px;		
+	}
+	@media(min-width: 1200px) {
+		margin-bottom: 230px;		
+	}
+}
+.weBelieveLeft {
+}
+.weBelieveTitle {
+	position: relative;
+
+	padding-bottom: 16px;
+
+	@media(min-width: 768px) {
+		margin-bottom: 50px;
+	}
+	@media(min-width: 992px) {		
+	}
+	@media(min-width: 1200px) {
+    margin-bottom: 180px;
+	}
+}
+.weBelieveTitle::before {
+	@media(min-width: 1200px) {
+    position: absolute;
+		top: 95px;
+		left: 0;
+		right: 0;
+
+		display: block;
+		width: 625px;
+		height: 281px;
+
+		content: '';
+		background-image: url("./weBelieveBg.svg");
+		background-size: cover;
+	}
+}
+.weBelieveInst {
+	display: none;
+
+	@media(min-width: 768px) {
+		display: flex;
+    justify-content: flex-start;
+	}
+	@media(min-width: 1200px) {
+    justify-content: flex-end;
+	}
+}
+.weBelieveInst img {
+	display: block;
+	width: 100px;
+
+	@media(min-width: 992px) {
+		width: 150px;
+	}
+}
+.weBelieveRight {
+	position: relative;
+}
+.weBelieveSignature {
+	position: relative;
+
+	display: block;
+	width: 255px;
+	margin-top: 20px;
+	margin-left: 88px;
+
+	@media(min-width: 992px) {
+		width: 315px;
+		margin-top: 32px;
+    margin-left: 190px;
+	}
+}

@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+
+// text
+.text {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 180%;
+}
+.text:last-of-type {
+  margin-bottom: 0;
+}
+
+// textLg
+.TextLarge {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 180%;
+
+  @media(min-width: 992px) {
+    margin-bottom: 32px;
+    
+    font-size: 18px;
+  }
+}
+.TextLarge:last-of-type {
+  margin-bottom: 0;
+}
+
+// textLead
+.textLead {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 180%;
+
+  @media(min-width: 992px) {
+    font-size: 20px;
+  }
+}
+.textLead:last-of-type {
+  margin-bottom: 0;
+}
+
+// textSubtitle
+.textBold {
+  margin-top: 0;
+  
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+}
+.textBold:last-of-type {
+  margin-bottom: 0;
+}

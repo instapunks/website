@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.faq {
+  margin-bottom: 70px;
+
+	@media(min-width: 1200px) {
+		margin-bottom: 200px;
+	}
+}
+.faqHeader {
+	position: relative;
+
+	margin-bottom: 30px;
+
+	@media(min-width: 768px) {
+		margin-bottom: 0;
+	}
+}
+.faqHeader::before {
+	position: absolute;
+	top: 44px;
+	left: 0;
+	right: 0;
+
+	display: block;
+	width: 92px;	
+
+	background-image: url("./faq-bg.svg");
+	background-size: cover;
+
+	@media(min-width: 768px) {
+		height: 275px;
+
+		content: '';
+	}
+	@media(min-width: 992px) {
+		top: 94px;
+
+		width: 194px;
+		height: 569px;
+	}
+}

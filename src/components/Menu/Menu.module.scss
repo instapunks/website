@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.menu {
+}
+.menuList {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	list-style: none;
+
+	@media(min-width: 768px) {
+		flex-direction: row;
+	}
+}
+.menuItem {
+	margin-right: 45px;
+}
+.menuItem:last-child {
+	margin-right: 0;
+}
+.menuLink {
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 20px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+	@media(min-width: 768px) {
+		font-size: 16px;
+	}
+}
+
+.menuVertical {
+	.menuList {
+		flex-direction: column;
+	}
+	.menuItem {
+		margin-right: 0;
+		margin-bottom: 24px;
+	}
+	.menuItem:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.roadmap {}
+.roadmapList {
+  position: relative;
+
+	padding-top: 7px;
+}
+.roadmapList::before {
+	position: absolute;
+	top: 0;
+	left: 30px;
+	bottom: 0;
+	z-index: 1;
+
+	display: block;
+	width: 1px;
+	height: 100%;
+
+	content: '';
+	background: radial-gradient(108.37% 102.62% at 50% 0%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%), #FFD26D;
+}
+.roadmapItem {
+	position:relative;
+	z-index: 2;
+
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+}
+.roadmapItem:last-child {
+	margin-bottom: 0;
+}
+.roadmapItemStatus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	flex: 0 0 60px;
+	margin-right: 24px;
+
+	font-family: $font-second;
+	font-size: 18px;
+	line-height: 100%;
+	letter-spacing: 0.115em;
+	color: #FFFFFF;
+
+	border-radius: 50%;
+	background-color: #FFD26D;
+
+	@media(min-width: 992px) {
+		margin-right: 30px;
+	}
+}
+.roadmapItem:nth-child(1) .roadmapItemStatus {
+	background: linear-gradient(180deg, #F98859 0%, #F54A49 100%);
+}
+.roadmapItem:nth-child(2) .roadmapItemStatus {
+	background: linear-gradient(180deg, #E8214F 0%, #D42473 100%);
+}
+.roadmapItem:nth-child(3) .roadmapItemStatus {
+	background: linear-gradient(180deg, #BA28A2 0%, #9E2FB4 100%);
+}
+.roadmapItem:nth-child(4) .roadmapItemStatus {
+	background: linear-gradient(180deg, #7639C6 0%, #5741D4 100%);
+}

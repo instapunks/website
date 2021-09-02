@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.minting {
+  
+}
+.mintingLine {
+	display: flex;
+	padding: 9px 0;
+
+	background: radial-gradient(98.3% 682.37% at 0.63% 100%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%), #C4C4C4;
+}
+.mintingLineItem {
+	padding: 0 17px;
+}
+.mintingLineItem p {
+	white-space: nowrap;
+}

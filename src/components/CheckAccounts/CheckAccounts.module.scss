@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.checkAccounts {
+	position: relative;
+
+	border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+}
+.checkAccountsHeader {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+}
+.checkAccountsBody {
+	width: 100%;
+
+	@media(min-width: 768px) {
+		display: flex;		
+	}
+}
+.checkAccountsBody > div {
+	@media(min-width: 768px) {
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-image-slice: 1;
+		border-width: 1px;
+		border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+	}
+	@media(min-width: 1200px) {
+		padding-top: 107px;
+		padding-left: 105px;
+		padding-right: 105px;
+		padding-bottom: 142px;
+	}
+}
+.checkAccountsBody > div.checkAccountsColLeft {
+	@media(min-width: 768px) {
+		border-right: 0px solid transparent;
+	}
+}
+.checkAccountsStarImg {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	display: none;
+
+	@media(min-width: 768px) {
+		display: block;
+		width: 100px;
+	}
+}

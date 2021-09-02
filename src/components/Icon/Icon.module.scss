@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+
+	background-size: cover;
+	background-position: top left;
+}
+.icon:hover {
+	background-position: top right;
+}
+.iconDesc {
+	background-image: url("./icon--desc.svg");
+}
+.iconInst {
+	background-image: url("./icon--inst.svg");
+}
+.iconTw {
+	background-image: url("./icon--tw.svg");
+}
+.iconTg {
+	background-image: url("./icon--tg.svg");
+}
+.iconPlus {
+	background-image: url("./icon--plus.svg");
+}
+.iconMinus {
+	background-image: url("./icon--minus.svg");
+}

@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.button {
+	padding: 10px 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #ffffff;
+	font-family: $font-main;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 100%;
+
+  border: none;	
+	background: linear-gradient(89.82deg, #F2203E 0%, #B729A8 45.59%, #5342D6 98.63%);
+
+	@media(min-width: 768px) {		
+		padding: 14px 24px;
+
+		font-size: 16px;
+	}
+}
+.buttonLarge {
+	padding: 14px 16px;
+	display: block;
+	width: 100%;
+
+	font-size: 16px;
+}

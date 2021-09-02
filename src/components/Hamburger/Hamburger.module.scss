@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.hamburger {
+  width: 34px;
+	height: 22px;
+}
+.hamburger img {
+	display: block;
+	width: 100%;
+}
+.hamburgerClose {
+	width: 27px;
+	height: 27px;
+}
+.hamburgerClose img {
+	display: block;
+	width: 100%;
+}

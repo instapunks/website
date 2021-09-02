@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.header {
+	padding-top: 10px;
+	padding-bottom: 30px;
+
+	@media(min-width: 992px) {
+		padding-top: 16px;
+		padding-bottom: 20px;
+	}
+}
+.headerBody {
+  display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.headerHamburger {
+	@media(min-width: 992px) {
+		display: none;
+	}
+}
+.headerMenu {
+	display: none;
+
+	@media(min-width: 992px) {
+		display: block;
+	}
+}
+.headerRight {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.headerSocial {
+	display: none;
+	
+	@media(min-width: 992px) {
+		display: block;
+		margin-right: 36px;
+	}
+}
+.headerSocial li {
+	margin-right: 24px;
+}
+.headerSocial svg {
+	width: 24px;
+	height: 24px;
+	
+}
