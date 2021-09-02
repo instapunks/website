@@ -22,4 +22,8 @@ module.exports = {
   env: {
     ASSETS_PREFIX: basePath,
   },
+  images: {
+    loader: "imgix",
+    path: "https://noop/",
+  }
 };
