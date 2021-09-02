@@ -3,19 +3,13 @@ import { Hamburger } from 'components/Hamburger/Hamburger';
 import { Menu } from 'components/Menu/Menu';
 import Social from 'components/Social/Social';
 import * as React from 'react';
-
 import styles from './Header.module.scss';
 
-type HeaderProps = {}
+type HeaderProps = unknown;
 
-export const Header: React.FC<HeaderProps> = ({
-  ...props
-}) => {
+export const Header: React.FC<HeaderProps> = ({ ...props }) => {
   return (
-    <header
-      className={styles.header}
-      {...props}
-    >
+    <header className={styles.header} {...props}>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -25,13 +19,7 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
 
               <div className={styles.headerMenu}>
-                <Menu
-                  items={[
-                    'Story',
-                    'Roadmap',
-                    'FAQ',
-                  ]}
-                />
+                <Menu items={['Story', 'Roadmap', 'FAQ']} />
               </div>
 
               <div className={styles.headerRight}>
@@ -48,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
     </header>
-  )
+  );
 };
 
 export default Header;

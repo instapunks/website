@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './Accordion.module.scss';
 import cs from 'clsx';
 import { Text, TextBold } from 'components/Text/Text';
@@ -7,41 +6,34 @@ import { IconMinus, IconPlus } from 'components/Icon/Icon';
 
 type AccordionProps = {
   items: {
-    question: string,
-    answer: string,
-    open?: boolean
-  }[]
-}
+    question: string;
+    answer: string;
+    open?: boolean;
+  }[];
+};
 
-export const Accordion: React.FC<AccordionProps> = ({
-  items,
-  ...props
-}) => {
-
+export const Accordion: React.FC<AccordionProps> = ({ items, ...props }) => {
   return (
-    <div
-      className={styles.accordion}
-      {...props}
-    >
+    <div className={styles.accordion} {...props}>
       {items.map((item, index) => (
         <AccordionItem
           key={index}
           question={item.question}
           answer={item.answer}
-          open={item.open}         
+          open={item.open}
         />
       ))}
     </div>
-  )
+  );
 };
 
 export default Accordion;
 
 type AccordionItemProps = {
-  question: string,
-  answer: string,
-  open?: boolean,
-}
+  question: string;
+  answer: string;
+  open?: boolean;
+};
 
 const AccordionItem: React.FC<AccordionItemProps> = ({
   question,
@@ -51,29 +43,20 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 }) => {
   return (
     <div
-      className={cs(
-        styles.accordionItem,
-        open && styles.accordionItemOpen
-      )}  
+      className={cs(styles.accordionItem, open && styles.accordionItemOpen)}
       {...props}
     >
       <div className={styles.question}>
         <TextBold>{question}</TextBold>
 
         <div className={styles.questionIcon}>
-          {open ? (
-            <IconMinus />
-          ) : (
-            <IconPlus />
-          )}
+          {open ? <IconMinus /> : <IconPlus />}
         </div>
       </div>
 
       <div className={styles.answer}>
-        <Text>
-          {answer}
-        </Text>
+        <Text>{answer}</Text>
       </div>
     </div>
-  )
+  );
 };

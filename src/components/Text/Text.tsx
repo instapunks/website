@@ -3,13 +3,10 @@ import * as React from 'react';
 import styles from './Text.module.scss';
 
 type TextProps = {
-  type?: 'text' | 'TextLarge' | 'textLead' | 'textBold'
-}
+  type?: 'text' | 'TextLarge' | 'textLead' | 'textBold';
+};
 
-const TextBase: React.FC<TextProps> = ({
-  type,
-  ...props
-}) => {
+const TextBase: React.FC<TextProps> = ({ type, ...props }) => {
   let styleType;
 
   switch (type) {
@@ -30,16 +27,19 @@ const TextBase: React.FC<TextProps> = ({
   }
 
   return (
-    <p
-      className={styleType}
-      {...props}
-    >
+    <p className={styleType} {...props}>
       {props.children}
     </p>
-  )
+  );
 };
 
-export const Text : React.FC = (props) => <TextBase {...props} />
-export const TextLarge : React.FC = (props) => <TextBase type="TextLarge" {...props} />
-export const TextLead : React.FC = (props) => <TextBase type="textLead" {...props} />
-export const TextBold : React.FC = (props) => <TextBase type="textBold" {...props} />
+export const Text: React.FC = (props) => <TextBase {...props} />;
+export const TextLarge: React.FC = (props) => (
+  <TextBase type="TextLarge" {...props} />
+);
+export const TextLead: React.FC = (props) => (
+  <TextBase type="textLead" {...props} />
+);
+export const TextBold: React.FC = (props) => (
+  <TextBase type="textBold" {...props} />
+);

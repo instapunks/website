@@ -6,16 +6,11 @@ import * as React from 'react';
 
 import styles from './MenuMobile.module.scss';
 
-type MenuMobileProps = {}
+type MenuMobileProps = unknown;
 
-export const MenuMobile: React.FC<MenuMobileProps> = ({
-  ...props
-}) => {
+export const MenuMobile: React.FC<MenuMobileProps> = ({ ...props }) => {
   return (
-    <div
-      className={styles.menuMobile}
-      {...props}
-    >
+    <div className={styles.menuMobile} {...props}>
       <div className={styles.menuMobileBody}>
         <div className={styles.menuMobileHamburger}>
           <HamburgerClosse />
@@ -25,13 +20,7 @@ export const MenuMobile: React.FC<MenuMobileProps> = ({
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <MenuVertical
-                  items={[
-                    'Story',
-                    'Roadmap',
-                    'FAQ',
-                  ]}
-                />
+                <MenuVertical items={['Story', 'Roadmap', 'FAQ']} />
               </div>
             </div>
           </div>
@@ -47,12 +36,10 @@ export const MenuMobile: React.FC<MenuMobileProps> = ({
           </div>
         </div>
 
-        <div className={styles.menuMobileFooter}>
-          2021 instaLab, LLC
-        </div>
+        <div className={styles.menuMobileFooter}>2021 instaLab, LLC</div>
       </div>
     </div>
-  )
+  );
 };
 
 export default MenuMobile;

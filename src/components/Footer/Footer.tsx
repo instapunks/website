@@ -4,16 +4,11 @@ import styles from './Footer.module.scss';
 import H2 from 'components/H2/H2';
 import Social from 'components/Social/Social';
 
-type FooterProps = {}
+type FooterProps = unknown;
 
-export const Footer: React.FC<FooterProps> = ({
-  ...props
-}) => {
+export const Footer: React.FC<FooterProps> = ({ ...props }) => {
   return (
-    <div
-      className={styles.footer}
-      {...props}
-    >
+    <div className={styles.footer} {...props}>
       <div className={styles.footerHeader}>
         <div className="container">
           <div className="row row-align-center">
@@ -36,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Footer;

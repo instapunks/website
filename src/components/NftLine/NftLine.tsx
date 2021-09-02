@@ -1,17 +1,11 @@
 import * as React from 'react';
-
 import styles from './NftLine.module.scss';
 
-type NftLineProps = {}
+type NftLineProps = unknown;
 
-export const NftLine: React.FC<NftLineProps> = ({
-  ...props
-}) => {
+export const NftLine: React.FC<NftLineProps> = ({ ...props }) => {
   return (
-    <div
-      className={styles.nftLine}
-      {...props}
-    >
+    <div className={styles.nftLine} {...props}>
       <div className={styles.nftLineData}>
         <div>
           9900 NFTs will be <br />
@@ -26,7 +20,7 @@ export const NftLine: React.FC<NftLineProps> = ({
 
       <div className={styles.nftLineColor}></div>
     </div>
-  )
+  );
 };
 
 export default NftLine;

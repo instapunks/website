@@ -1,14 +1,13 @@
 import * as React from 'react';
-
 import styles from './Button.module.scss';
 import cs from 'clsx';
 
 type ButtonProps = {
-  iconLeft?: React.ReactNode,
-  iconRight?: React.ReactNode,
-  disabled?: boolean,
-  modifier?: 'buttonLarge' | 'buttonExtraLarge'
-}
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
+  disabled?: boolean;
+  modifier?: 'buttonLarge' | 'buttonExtraLarge';
+};
 
 export const BaseButton: React.FC<ButtonProps> = ({
   iconLeft,
@@ -33,20 +32,20 @@ export const BaseButton: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button
-      className={styleType}
-      disabled={disabled}
-      {...props}
-    >
+    <button className={styleType} disabled={disabled} {...props}>
       {iconLeft}
 
       {props.children}
 
       {iconRight}
     </button>
-  )
+  );
 };
 
-export const Button : React.FC = (props) => <BaseButton {...props} />
-export const ButtonLarge : React.FC = (props) => <BaseButton modifier="buttonLarge" {...props} />
-export const ButtonExtraLarge : React.FC = (props) => <BaseButton modifier="buttonExtraLarge" {...props} />
+export const Button: React.FC = (props) => <BaseButton {...props} />;
+export const ButtonLarge: React.FC = (props) => (
+  <BaseButton modifier="buttonLarge" {...props} />
+);
+export const ButtonExtraLarge: React.FC = (props) => (
+  <BaseButton modifier="buttonExtraLarge" {...props} />
+);

@@ -3,16 +3,11 @@ import * as React from 'react';
 
 import styles from './Social.module.scss';
 
-type SocialProps = {}
+type SocialProps = unknown;
 
-export const Social: React.FC<SocialProps> = ({
-  ...props
-}) => {
+export const Social: React.FC<SocialProps> = ({ ...props }) => {
   return (
-    <ul
-      className={styles.social}
-      {...props}
-    >
+    <ul className={styles.social} {...props}>
       <li className={styles.socialItem}>
         <a href="soc" className={styles.socialLink}>
           <IconInst />
@@ -37,7 +32,7 @@ export const Social: React.FC<SocialProps> = ({
         </a>
       </li>
     </ul>
-  )
+  );
 };
 
 export default Social;
