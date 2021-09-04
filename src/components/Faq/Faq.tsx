@@ -1,18 +1,22 @@
 import * as React from 'react';
+
 import styles from './Faq.module.scss';
 import H2 from 'components/H2/H2';
 import Accordion from 'components/Accordion/Accordion';
+import { useTranslation } from 'react-i18next';
 
 type FaqProps = unknown;
 
 export const Faq: React.FC<FaqProps> = ({ ...props }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.faq} {...props}>
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-3">
             <div className={styles.faqHeader}>
-              <H2>FAQ</H2>
+              <H2>{t('FAQ')}</H2>
             </div>
           </div>
 

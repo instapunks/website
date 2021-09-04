@@ -3,31 +3,51 @@
 .checkAccounts {
 	position: relative;
 
+	margin-bottom: 70px;	
+
 	border-bottom: 1px solid;
   border-image-slice: 1;
   border-width: 1px;
 	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+
+	@media(min-width: 992px) {
+		margin-bottom: 120px;		
+	}
+	@media(min-width: 1200px) {
+		margin-bottom: 220px;		
+	}
 }
 .checkAccountsHeader {
+	padding-top: 16px;
+  padding-bottom: 7px;
+
 	border-top: 1px solid;
 	border-bottom: 1px solid;
   border-image-slice: 1;
   border-width: 1px;
 	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+
+	@media(min-width: 992px) {
+		padding-top: 30px;
+    padding-bottom: 20px;
+	}
 }
 .checkAccountsBody {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 
 	@media(min-width: 768px) {
-		display: flex;		
+		flex-direction: row;
 	}
 }
 .checkAccountsBody > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	@media(min-width: 768px) {
-		width: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		width: 50%;		
 
 		border-left: 1px solid;
 		border-right: 1px solid;
@@ -35,11 +55,12 @@
 		border-width: 1px;
 		border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
 	}
+	@media(min-width: 992px) {
+		min-height: 392px;
+		padding: 18px;
+	}
 	@media(min-width: 1200px) {
-		padding-top: 107px;
-		padding-left: 105px;
-		padding-right: 105px;
-		padding-bottom: 142px;
+		
 	}
 }
 .checkAccountsBody > div.checkAccountsColLeft {
@@ -47,15 +68,87 @@
 		border-right: 0px solid transparent;
 	}
 }
+.checkAccountsBody > div.checkAccountsColLeft {
+	order: 2;
+
+	padding-top: 25px;
+	padding-bottom: 25px;
+	
+	@media(min-width: 768px) {
+		order: 1;
+		padding: 17px;
+	}
+	@media(min-width: 992px) {
+		padding: 18px;
+	}
+}
+.checkAccountsBody > div.checkAccountsColRight {
+	position: relative;
+
+	padding: 18px;
+	min-height: 230px;
+	order: 1;
+
+	@media(max-width: 767px) {
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-image-slice: 1;
+		border-width: 1px;
+		border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+	}
+	@media(min-width: 768px) {
+		order: 2;
+	}
+}
+.checkAccountsBody > div.checkAccountsColRight::before {
+	@media(max-width: 767px) {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+
+		display: block;
+		width: 768px;
+		height: 1px;
+
+		background: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+		content: '';
+		
+		transform: translateX(-50%);
+	}
+}
 .checkAccountsStarImg {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 240px;
+  left: 50%;
 
 	display: none;
 
-	@media(min-width: 768px) {
+	@media(min-width: 1200px) {
 		display: block;
-		width: 100px;
+		width: 233px;
+		margin-left: 645px;
 	}
+}
+.checkAccountsForm {
+	width: 100%;
+	max-width: 348px;
+}
+.checkAccountsFormItem {
+	margin-bottom: 10px;
+}
+.checkAccountsFormItem p {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 130%;
+}
+.checkAccountsFormItem button {
+	padding: 17px 16px;
+}
+.checkAccountsFormErrMsg {
+	margin-top: 16px;
+
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 130%;
+	color: #F2203E;
 }

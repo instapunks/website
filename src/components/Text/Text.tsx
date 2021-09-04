@@ -33,13 +33,15 @@ const TextBase: React.FC<TextProps> = ({ type, ...props }) => {
   );
 };
 
-export const Text: React.FC = (props) => <TextBase {...props} />;
-export const TextLarge: React.FC = (props) => (
+export const Text: React.FC<TextProps> = ({ ...props }) => (
+  <TextBase {...props} />
+);
+export const TextLarge: React.FC<TextProps> = ({ ...props }) => (
   <TextBase type="TextLarge" {...props} />
 );
-export const TextLead: React.FC = (props) => (
+export const TextLead: React.FC<TextProps> = ({ ...props }) => (
   <TextBase type="textLead" {...props} />
 );
-export const TextBold: React.FC = (props) => (
+export const TextBold: React.FC<TextProps> = ({ ...props }) => (
   <TextBase type="textBold" {...props} />
 );

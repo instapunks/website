@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.star {
+	
+}
+.starImg {
+	display: block;
+	width: 160px;
+	margin-bottom: 12px;
+
+	@media(min-width: 992px) {
+		width: 200px;
+	}
+}
+.starName {
+	margin-bottom: 8px;
+
+	font-family: $font-second;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 87.19%;
+
+	background: $color-gradient-title;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.starNicknameWrapper {
+	display: flex;
+	align-items: center;
+}
+.starNickname {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 100%;
+	color: #FFFFFF;
+
+	@media(min-width: 992px) {
+		font-size: 16px;
+	}
+}
+.starVerified {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-left: 12px;
+
+	fill: #315EFF;
+
+	@media(min-width: 992px) {
+		width: 20px;
+		height: 20px;
+	}
+}

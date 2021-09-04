@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Image from 'next/image';
+
 import cs from 'clsx';
 import { useTranslation } from 'react-i18next';
 import H2 from 'components/H2/H2';
@@ -21,7 +21,7 @@ export const WeBelieve: React.FC<WeBelieveProps> = ({ ...props }) => {
             </div>
 
             <div className={styles.weBelieveInst}>
-              <Image src="./instagram.svg" alt="" />
+              <img src="./instagram.svg" alt="Instagram" />
             </div>
           </div>
 
@@ -44,7 +44,7 @@ export const WeBelieve: React.FC<WeBelieveProps> = ({ ...props }) => {
               )}
             </TextLarge>
 
-            <Image
+            <img
               src="./signature.svg"
               alt="signature"
               className={styles.weBelieveSignature}

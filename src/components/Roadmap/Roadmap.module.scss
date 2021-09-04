@@ -1,6 +1,50 @@
 @import '../../styles/variables.scss';
 
-.roadmap {}
+.roadmap {
+	margin-bottom: 70px;
+
+	@media(min-width: 992px) {
+		margin-bottom: 120px;		
+	}
+	@media(min-width: 1200px) {
+		margin-bottom: 248px;		
+	}
+}
+.roadmapHeader {
+	margin-bottom: 28px;
+
+	@media(min-width: 992px) {
+		margin-bottom: 80px;		
+	}
+}
+.roadmapHeader h2 {
+	max-width: 700px;
+}
+.roadmapStarWrapper {
+	position: relative;
+}
+.roadmapStarImg {
+	position: absolute;
+
+	display: none;
+
+	@media(min-width: 768px) {
+		top: 40px;
+
+		display: block;
+		width: 350px;
+	}
+	@media(min-width: 992px) {
+		top: 20px;
+
+		width: 400px;	
+	}
+	@media(min-width: 1200px) {
+		top: -20px;
+		
+		width: 461px;	
+	}
+}
 .roadmapList {
   position: relative;
 
@@ -64,4 +108,11 @@
 }
 .roadmapItem:nth-child(4) .roadmapItemStatus {
 	background: linear-gradient(180deg, #7639C6 0%, #5741D4 100%);
+}
+.roadmapItemText p {
+	line-height: 130%;
+
+	@media(min-width: 992px) {
+		line-height: 130%;
+	}
 }

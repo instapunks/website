@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+.input {
+  display: block;
+	padding: 13px;
+	height: 50px;
+	margin: 0;
+	width: 100%;
+
+	font-family: $font-second;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 100%;
+	text-align: center;
+	color: #FFFFFF;
+
+	background: none;
+	outline: none;
+	border: 1px solid;
+	border-image-slice: 1;
+	border-width: 1px;
+	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+}
+
+// inputLeft
+.inputLeft {
+	font-family: $font-main;
+	text-align: left;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 130%;
+	color: #FFFFFF;
+
+	border-image-source: linear-gradient(86.44deg, #F32740 0%, #B314E2 51.45%, #5342D6 99.53%);
+}
+.inputLeft:hover,
+.inputLeft:active,
+.inputLeft:focus {
+	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+}
+.inputLeft::-webkit-input-placeholder {
+	color: #8A7BFF;
+}
+.inputLeft::-moz-placeholder {
+	color: #8A7BFF;
+	text-overflow: ellipsis;
+
+	opacity: 1;
+}
+.inputLeft:-moz-placeholder {
+	color: #8A7BFF;
+	text-overflow: ellipsis;
+
+	opacity: 1;
+}
+.inputLeft:-ms-input-placeholder {
+	color: #8A7BFF;
+	text-overflow: ellipsis;
+}
+.inputLeft[placeholder] {
+	text-overflow: ellipsis;
+}
+
+// inputError
+.inputError,
+.inputError:hover,
+.inputError:active,
+.inputError:focus {
+	border-image-source: none;
+	border: 1px solid #F32740;
+}

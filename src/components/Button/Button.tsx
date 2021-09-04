@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import styles from './Button.module.scss';
 import cs from 'clsx';
 
@@ -6,7 +7,12 @@ type ButtonProps = {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   disabled?: boolean;
-  modifier?: 'buttonLarge' | 'buttonExtraLarge';
+  modifier?:
+    | 'buttonLarge'
+    | 'buttonExtraLarge'
+    | 'buttonCircle'
+    | 'buttonCircleWhite'
+    | 'buttonCircleOutline';
 };
 
 export const BaseButton: React.FC<ButtonProps> = ({
@@ -27,6 +33,18 @@ export const BaseButton: React.FC<ButtonProps> = ({
       styleType = cs(styles.button, styles.buttonExtraLarge);
       break;
 
+    case 'buttonCircle':
+      styleType = cs(styles.button, styles.buttonCircle);
+      break;
+
+    case 'buttonCircleWhite':
+      styleType = cs(styles.button, styles.buttonCircleWhite);
+      break;
+
+    case 'buttonCircleOutline':
+      styleType = cs(styles.button, styles.buttonCircleOutline);
+      break;
+
     default:
       styleType = styles.button;
   }
@@ -42,10 +60,29 @@ export const BaseButton: React.FC<ButtonProps> = ({
   );
 };
 
-export const Button: React.FC = (props) => <BaseButton {...props} />;
-export const ButtonLarge: React.FC = (props) => (
+export const Button: React.FC<ButtonProps> = ({ ...props }) => (
+  <BaseButton {...props} />
+);
+export const ButtonLarge: React.FC<ButtonProps> = ({ ...props }) => (
   <BaseButton modifier="buttonLarge" {...props} />
 );
-export const ButtonExtraLarge: React.FC = (props) => (
+export const ButtonExtraLarge: React.FC<ButtonProps> = ({ ...props }) => (
   <BaseButton modifier="buttonExtraLarge" {...props} />
 );
+export const ButtonCircle: React.FC<ButtonProps> = ({ ...props }) => (
+  <BaseButton modifier="buttonCircle" {...props} />
+);
+export const ButtonCircleWhite: React.FC<ButtonProps> = ({ ...props }) => (
+  <BaseButton modifier="buttonCircleWhite" {...props} />
+);
+export const ButtonCircleOutline: React.FC<ButtonProps> = ({ ...props }) => (
+  <BaseButton modifier="buttonCircleOutline" {...props} />
+);
+
+export const BtnPlus: React.FC = ({}) => {
+  return <div className={styles.btnPlus}></div>;
+};
+
+export const BtnMinus: React.FC = ({}) => {
+  return <div className={styles.btnMinus}></div>;
+};

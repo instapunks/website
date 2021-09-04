@@ -1,8 +1,10 @@
 import React from 'react';
+
 import styles from './Accordion.module.scss';
 import cs from 'clsx';
 import { Text, TextBold } from 'components/Text/Text';
 import { IconMinus, IconPlus } from 'components/Icon/Icon';
+import { useTranslation } from 'react-i18next';
 
 type AccordionProps = {
   items: {
@@ -41,13 +43,15 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   open,
   ...props
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cs(styles.accordionItem, open && styles.accordionItemOpen)}
       {...props}
     >
       <div className={styles.question}>
-        <TextBold>{question}</TextBold>
+        <TextBold>{t(question)}</TextBold>
 
         <div className={styles.questionIcon}>
           {open ? <IconMinus /> : <IconPlus />}
@@ -55,7 +59,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       </div>
 
       <div className={styles.answer}>
-        <Text>{answer}</Text>
+        <Text>{t(answer)}</Text>
       </div>
     </div>
   );

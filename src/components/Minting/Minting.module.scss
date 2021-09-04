@@ -1,17 +1,118 @@
 @import '../../styles/variables.scss';
 
 .minting {
-  
+	margin-bottom: 70px;
+
+  text-align: center;
+	
+	border-top: 1px solid;
+	border-image-slice: 1;
+	border-width: 1px;
+	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+
+	@media(min-width: 992px) {
+		margin-bottom: 120px;
+	}
+	@media(min-width: 1200px) {
+		margin-bottom: 200px;
+	}
+}
+.mintingBody {
+	padding-top: 36px;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-bottom: 25px;
+
+	white-space: pre-line;
+	
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-image-slice: 1;
+	border-width: 1px;
+	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+
+	@media(min-width: 1200px) {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+}
+.mintingHeader {
+	margin-bottom: 10px;
+
+	@media(min-width: 1200px) {
+		margin-bottom: 16px;
+	}
 }
 .mintingLine {
 	display: flex;
-	padding: 9px 0;
+	padding: 6px 0;
 
 	background: radial-gradient(98.3% 682.37% at 0.63% 100%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%), #C4C4C4;
+
+	@media(min-width: 992px) {
+		padding: 9px 0;
+	}
 }
 .mintingLineItem {
 	padding: 0 17px;
 }
 .mintingLineItem p {
 	white-space: nowrap;
+}
+.mintingSum {
+	margin-top: 25px;
+  margin-bottom: 35px;
+
+	font-family: $font-second;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 87.19%;
+	text-align: center;
+
+	background: $color-gradient-title;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+	@media(min-width: 992px) {
+		font-size: 48px;
+	}
+	@media(min-width: 1200px) {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+.mintingQuantity {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 348px;
+	margin: 0 auto;
+}
+.mintingQuantity button {
+	flex: 0 0 50px;
+
+}
+.mintingQuantity input {
+	margin: 0 10px;
+
+	@media(min-width: 768px) {
+		margin: 0 30px;
+	}
+}
+.mintingQuantitySubmit button {
+	padding: 17px 16px;
+	max-width: 348px;
+	margin: 0 auto;
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	@media(min-width: 768px) {
+		margin-top: 24px;
+	}
+}
+.mintingQuantityAgree {
+	max-width: 348px;
+	margin: 0 auto;
+
+	text-align: left;
 }

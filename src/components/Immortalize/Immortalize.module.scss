@@ -12,6 +12,10 @@
 		margin-bottom: 200px;
 	}
 }
+.immortalize > * {
+	position: relative;
+	z-index: 2;
+}
 .immortalizeImgStar1 {
 	position: absolute;
 
@@ -50,7 +54,7 @@
 		top: 0;
 		left: 50%;
 
-		margin-left: 340px;
+		margin-left: 240px;
 	}
 	@media(min-width: 992px) {
 		margin-left: 440px;

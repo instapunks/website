@@ -1,7 +1,7 @@
-import { IconDesc, IconInst, IconTg, IconTw } from 'components/Icon/Icon';
 import * as React from 'react';
 
 import styles from './Social.module.scss';
+import { IconDesc, IconInst, IconTg, IconTw } from 'components/Icon/Icon';
 
 type SocialProps = unknown;
 

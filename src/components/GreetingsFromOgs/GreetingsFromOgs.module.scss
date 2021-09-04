@@ -3,24 +3,36 @@
 .greetingsFromOgs {
   margin-bottom: 70px;
 
-	@media(min-width: 1200px) {
-		margin-bottom: 200px;
-	}
+  @media (min-width: 1200px) {
+    margin-bottom: 200px;
+  }
 }
 .greetingsFromOgsHeader {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 
-	@media(min-width: 1200px) {
-		padding-top: 30px;
-		padding-bottom: 22px;
+  @media (min-width: 1200px) {
+    padding-top: 30px;
+    padding-bottom: 22px;
 
-		border-top: 1px solid;
-		border-bottom: 1px solid;
-		border-image-slice: 1;
-		border-width: 1px;
-		border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
-	}
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: radial-gradient(
+      110.62% 152.45% at -5.94% 92.66%,
+      #ffd26d 0%,
+      #f2203e 32.73%,
+      #b729a8 64.85%,
+      #5342d6 100%
+    );
+  }
+}
+.greetingsFromOgsItem {
+  flex-shrink: 0;
+  margin: 10px 50px;
 }
 .greetingsFromOgsBody {
-	
+  display: flex;
+  justify-content: center;
+  padding: 24px 48px;
 }

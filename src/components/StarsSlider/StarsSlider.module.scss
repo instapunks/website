@@ -1,6 +1,14 @@
 @import '../../styles/variables.scss';
 
+.star {
+	flex-shrink: 0;
+	margin: 10px;
+}
+
 .starsSlider {
+	position: relative;
+	display: flex;
+	justify-content: center;
 	height: 210px;
 	margin-bottom: 70px;
 

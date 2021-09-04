@@ -1,13 +1,17 @@
+import * as React from 'react';
+
+import styles from './Header.module.scss';
 import { Button } from 'components/Button/Button';
 import { Hamburger } from 'components/Hamburger/Hamburger';
 import { Menu } from 'components/Menu/Menu';
 import Social from 'components/Social/Social';
-import * as React from 'react';
-import styles from './Header.module.scss';
+import { useTranslation } from 'react-i18next';
 
 type HeaderProps = unknown;
 
 export const Header: React.FC<HeaderProps> = ({ ...props }) => {
+  const { t } = useTranslation();
+
   return (
     <header className={styles.header} {...props}>
       <div className="container">
@@ -28,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
                 </div>
 
                 <div className={styles.headerWallet}>
-                  <Button>Connect Wallet</Button>
+                  <Button>{t('Connect Wallet')}</Button>
                 </div>
               </div>
             </div>

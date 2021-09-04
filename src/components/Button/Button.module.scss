@@ -14,6 +14,7 @@
 
   border: none;	
 	background: linear-gradient(89.82deg, #F2203E 0%, #B729A8 45.59%, #5342D6 98.63%);
+	cursor: pointer;
 
 	@media(min-width: 768px) {		
 		padding: 14px 24px;
@@ -21,10 +22,128 @@
 		font-size: 16px;
 	}
 }
+.button:hover {
+	background: radial-gradient(90.8% 194.7% at 8.13% 89.41%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+}
+.button:disabled,
+.button[disabled] {
+	background: #3F377B;
+	cursor: default;
+}
+
+// buttonLarge
 .buttonLarge {
 	padding: 14px 16px;
 	display: block;
 	width: 100%;
 
 	font-size: 16px;
+
+	cursor: pointer;
+}
+
+// buttonCircle
+.buttonCircle {
+	width: 60px;
+	height: 60px;
+	padding: 0;
+
+	border-radius: 50%;
+}
+.buttonCircle div {
+	display: block;
+	width: 18px;
+	height: 18px;
+}
+.buttonCircle:hover div {
+	background-position: top right;
+}
+
+// buttonCircleWhite
+.buttonCircleWhite {
+	width: 60px;
+	height: 60px;
+	padding: 0;
+
+	background: none;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+
+	transition: all 0.4s;
+}
+.buttonCircleWhite > div {
+	width: 29px;
+	height: 29px;
+}
+.buttonCircleWhite:hover {
+	background: #ffffff;
+
+	transition: all 0.4s;
+}
+.buttonCircleWhite:hover > div {
+	background-position: top right;
+}
+
+// buttonCircleOutline
+.buttonCircleOutline {
+	width: 50px;
+	height: 50px;
+
+	padding: 0;
+
+	background: none;
+	background-image: url("./button-outline-bg.svg");
+	background-size: cover;
+	background-position: top left;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.buttonCircleOutline:hover {
+	background: none;
+	background-image: url("./button-outline-bg.svg");
+	background-position: top right;
+}
+.buttonCircleOutline:disabled,
+.buttonCircleOutline[disabled] {
+	background: none;
+	border: 1px solid #3F377B;
+	cursor: default;
+}
+
+.btnPlus,
+.btnMinus {
+	position: relative;
+
+	width: 30px;
+	height: 1px;
+
+	background: radial-gradient(90.8% 93.7% at 8.13% 89.41%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%), #000000;
+}
+.buttonCircleOutline:hover .btnPlus,
+.buttonCircleOutline:hover .btnPlus::before,
+.buttonCircleOutline:hover .btnMinus {
+	background: #ffffff;
+}
+.btnPlus::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: block;
+	width: 100%;
+	height: 1px;
+
+	content: '';
+	background: radial-gradient(90.8% 93.7% at 8.13% 89.41%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%), #000000;
+	transform: rotate(90deg);
+}
+.buttonCircleOutline:disabled .btnPlus,
+.buttonCircleOutline:disabled .btnPlus::before,
+.buttonCircleOutline[disabled] .btnMinus,
+.buttonCircleOutline:disabled:hover .btnPlus,
+.buttonCircleOutline:disabled:hover .btnPlus::before,
+.buttonCircleOutline[disabled]:hover .btnMinus {
+	background: #3F377B;
 }

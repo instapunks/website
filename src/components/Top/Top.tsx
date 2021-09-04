@@ -1,8 +1,9 @@
 import * as React from 'react';
-import Image from 'next/image';
+
 import cs from 'clsx';
 import { useTranslation } from 'react-i18next';
 import H1 from 'components/H1/H1';
+
 import styles from './Top.module.scss';
 import { TextLead } from 'components/Text/Text';
 
@@ -24,16 +25,15 @@ export const Top: React.FC<TopProps> = ({ ...props }) => {
 
           <div className="col-12 col-md-6 offset-md-1">
             <TextLead>
-              Instapunks is a collection of living digital art collectables
-              inspired by 10,000 Instagram influencers. The collection was not
-              randomly generated: each Instapunk was designed by InstaLabs after
-              its real-world alter ego.
+              {t(
+                'Instapunks is a collection of living digital art collectables inspired by 10,000 Instagram influencers. The collection was not randomly generated: each Instapunk was designed by InstaLabs after its real-world alter ego.'
+              )}
             </TextLead>
           </div>
         </div>
       </div>
 
-      <Image src="./top-img.svg" alt="icon star" className={styles.topImg} />
+      <img src="./top-img.svg" alt="icon star" className={styles.topImg} />
     </div>
   );
 };

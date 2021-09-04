@@ -1,14 +1,17 @@
+import * as React from 'react';
+
+import styles from './MenuMobile.module.scss';
+import { useTranslation } from 'react-i18next';
 import { ButtonLarge } from 'components/Button/Button';
 import { HamburgerClosse } from 'components/Hamburger/Hamburger';
 import { MenuVertical } from 'components/Menu/Menu';
 import Social from 'components/Social/Social';
-import * as React from 'react';
-
-import styles from './MenuMobile.module.scss';
 
 type MenuMobileProps = unknown;
 
 export const MenuMobile: React.FC<MenuMobileProps> = ({ ...props }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.menuMobile} {...props}>
       <div className={styles.menuMobileBody}>
@@ -27,7 +30,7 @@ export const MenuMobile: React.FC<MenuMobileProps> = ({ ...props }) => {
         </div>
 
         <div className={styles.menuMobileWallet}>
-          <ButtonLarge>Connect Wallet</ButtonLarge>
+          <ButtonLarge>{t('Connect Wallet')}</ButtonLarge>
         </div>
 
         <div className={styles.menuMobileSocial}>
@@ -36,7 +39,7 @@ export const MenuMobile: React.FC<MenuMobileProps> = ({ ...props }) => {
           </div>
         </div>
 
-        <div className={styles.menuMobileFooter}>2021 instaLab, LLC</div>
+        <div className={styles.menuMobileFooter}>{t('2021 instaLab, LLC')}</div>
       </div>
     </div>
   );

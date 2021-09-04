@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import styles from './Icon.module.scss';
 import cs from 'clsx';
 
@@ -26,4 +27,12 @@ export const IconPlus: React.FC<IconProps> = () => {
 
 export const IconMinus: React.FC<IconProps> = () => {
   return <div className={cs(styles.icon, styles.iconMinus)}></div>;
+};
+
+export const IconArrowRightBtn: React.FC<IconProps> = () => {
+  return <div className={cs(styles.icon, styles.iconArrowRightBtn)}></div>;
+};
+
+export const IconPlay: React.FC<IconProps> = () => {
+  return <div className={cs(styles.icon, styles.iconPlay)}></div>;
 };

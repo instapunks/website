@@ -2,6 +2,13 @@
 
 .livingArt {
   margin-bottom: 70px;
+
+	@media(min-width: 992px) {		
+		margin-bottom: 120px;
+	}
+	@media(min-width: 1200px) {		
+		margin-bottom: 200px;
+	}
 }
 .livingArtHeader {
 	margin-bottom: 18px;

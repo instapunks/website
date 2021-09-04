@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .weBelieve {
-  margin-bottom: 68px;
+  margin-bottom: 65px;
 
 	@media(min-width: 768px) {
 		margin-bottom: 100px;
@@ -18,7 +18,7 @@
 .weBelieveTitle {
 	position: relative;
 
-	padding-bottom: 16px;
+	padding-bottom: 18px;
 
 	@media(min-width: 768px) {
 		margin-bottom: 50px;
@@ -73,11 +73,12 @@
 	display: block;
 	width: 255px;
 	margin-top: 20px;
-	margin-left: 88px;
+	margin-right: -45px;
+	float: right;
 
 	@media(min-width: 992px) {
 		width: 315px;
 		margin-top: 32px;
-    margin-left: 190px;
+		margin-right: -63px;
 	}
 }
