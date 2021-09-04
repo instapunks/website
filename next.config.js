@@ -16,6 +16,7 @@ const basePath = isProduction ? `/${package.name}` : '';
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
 module.exports = {
+  target: "serverless",
   trailingSlash: true,
   reactStrictMode: true,
   basePath,
