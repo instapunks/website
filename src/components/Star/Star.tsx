@@ -8,6 +8,7 @@ type StarProps = {
   name: string;
   nickname: string;
   verified?: boolean;
+  className?: string;
 };
 
 export const Star: React.FC<StarProps> = ({

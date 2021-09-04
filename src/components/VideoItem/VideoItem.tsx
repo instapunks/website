@@ -11,6 +11,7 @@ type VideoItemProps = {
   desc: string;
   nickname: string;
   verified?: boolean;
+  className?: string;
 };
 
 export const VideoItem: React.FC<VideoItemProps> = ({
