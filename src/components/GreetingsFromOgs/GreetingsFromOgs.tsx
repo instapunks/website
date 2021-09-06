@@ -81,6 +81,7 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
               delay: 500,
               disableOnInteraction: true,
             }}
+            loop={true}
             initialSlide={3}
           >
             {videos.map((props, index) => (

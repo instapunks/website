@@ -32,6 +32,7 @@ export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
       spaceBetween={20}
       className={styles.starsSlider}
       initialSlide={4}
+      loop={true}
       autoplay={{
         delay: 500,
         disableOnInteraction: false,
