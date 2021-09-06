@@ -21,23 +21,14 @@ export const Home: React.FunctionComponent = () => {
   return (
     <div className="wrapper">
       <Header />
-
       <Top />
-
       <StarsSlider />
-
       <WeBelieve />
-
       <GreetingsFromOgs />
-
       <LivingArt />
-
-      <Colors />
-
+      {/* <Colors /> */}
       <Tokenomics />
-
       <Immortalize />
-
       <GlobalAuction
         items={[
           {
@@ -111,17 +102,11 @@ export const Home: React.FunctionComponent = () => {
           },
         ]}
       />
-
       <Minting />
-
       <Roadmap />
-
       <CheckAccounts />
-
       <Faq />
-
       <Footer />
-
       <MenuMobile />
     </div>
   );
