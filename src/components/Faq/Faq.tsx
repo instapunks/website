@@ -56,10 +56,7 @@ export const Faq: React.FC<FaqProps> = ({ ...props }) => {
                 },
                 {
                   question: 'Could you tell me more about royalties?',
-                  answer: `First, 5% royalty from all Instapunk secondary sales on Opensea are distributed among all NFT holders, proportionally to the number of Instapunks they own.
-                    Second, if your Instapunk’s alter-ego launches an NFT collection on our platform (with or without your help) you will get 5% royalties from its sales. 
-                    Third, additional 5% royalties from sales of celebrity NFT collections will go to 1 of 13 PunkDAOs, which include all Instapunks with similar background colors that reflect the number of Instagram followers of their alter-egos. You will own a share of DAO funds proportionally to the number of Instapunks with the same background color.
-                    `,
+                  answer: `First, 5% royalty from all Instapunk secondary sales on Opensea are distributed among all NFT holders, proportionally to the number of Instapunks they own. Second, if your Instapunk’s alter-ego launches an NFT collection on our platform (with or without your help) you will get 10% royalties from its sales.`,
                 },
                 {
                   question:
