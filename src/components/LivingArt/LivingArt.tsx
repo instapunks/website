@@ -17,7 +17,11 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
       <div className={cs(styles.livingArtHeader, 'container')}>
         <div className="row">
           <div className="col-12 col-8">
-            <H3>{t('Launch your digital art collection in 24 hours with an Instagram post')}</H3>
+            <H3>
+              {t(
+                'Launch your digital art collection in 24 hours with an Instagram post'
+              )}
+            </H3>
           </div>
         </div>
       </div>
