@@ -72,7 +72,17 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
           </div>
         </div>
         <div className={styles.greetingsFromOgsBody}>
-          <Swiper slidesPerView="auto" centeredSlides={true} spaceBetween={40}>
+          <Swiper
+            slidesPerView="auto"
+            centeredSlides={true}
+            spaceBetween={40}
+            mousewheel={true}
+            autoplay={{
+              delay: 500,
+              disableOnInteraction: true,
+            }}
+            initialSlide={3}
+          >
             {videos.map((props, index) => (
               <SwiperSlide key={index} className={styles.greetingsFromOgsItem}>
                 <VideoItem {...props} verified={true} />

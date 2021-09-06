@@ -28,8 +28,14 @@ export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
     <Swiper
       slidesPerView="auto"
       centeredSlides={true}
+      mousewheel={true}
       spaceBetween={20}
       className={styles.starsSlider}
+      initialSlide={4}
+      autoplay={{
+        delay: 500,
+        disableOnInteraction: false,
+      }}
     >
       {stars.map(({ name, insta }, index) => (
         <SwiperSlide key={insta} className={styles.star}>
