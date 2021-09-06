@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './MenuMobile.module.scss';
 import { useTranslation } from 'react-i18next';
-import { ButtonLarge } from 'components/Button/Button';
+import { Wallet } from 'components/Wallet/Wallet';
 import { HamburgerClosse } from 'components/Hamburger/Hamburger';
 import { MenuVertical } from 'components/Menu/Menu';
 import Social from 'components/Social/Social';
@@ -30,7 +30,7 @@ export const MenuMobile: React.FC<MenuMobileProps> = ({ ...props }) => {
         </div>
 
         <div className={styles.menuMobileWallet}>
-          <ButtonLarge>{t('Connect Wallet')}</ButtonLarge>
+          <Wallet />
         </div>
 
         <div className={styles.menuMobileSocial}>

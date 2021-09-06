@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import styles from './Header.module.scss';
-import { Button } from 'components/Button/Button';
+import { Wallet } from 'components/Wallet/Wallet';
 import { Hamburger } from 'components/Hamburger/Hamburger';
 import { Menu } from 'components/Menu/Menu';
 import Social from 'components/Social/Social';
@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
                 </div>
 
                 <div className={styles.headerWallet}>
-                  <Button>{t('Connect Wallet')}</Button>
+                  <Wallet />
                 </div>
               </div>
             </div>

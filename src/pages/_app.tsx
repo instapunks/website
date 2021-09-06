@@ -12,6 +12,8 @@ import type { AppProps } from 'next/app';
 import 'i18n';
 
 import 'styles/globals.scss';
+import { Web3ReactProvider } from '@web3-react/core';
+import getLibrary from 'state/provider/getLibrary';
 
 const SafeHydrate: FunctionComponent = ({ children }) => (
   <div suppressHydrationWarning>
@@ -21,7 +23,9 @@ const SafeHydrate: FunctionComponent = ({ children }) => (
 
 export const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <SafeHydrate>
-    <Component {...pageProps} />
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Component {...pageProps} />
+    </Web3ReactProvider>
   </SafeHydrate>
 );
 
