@@ -24,6 +24,8 @@ export const Star: React.FC<StarProps> = ({
     <div className={styles.star} {...props}>
       <img src={img} alt={t(name)} className={styles.starImg} />
 
+      <div className={styles.starName}>{t('NFT Agent for')}</div>
+
       <div className={styles.starNicknameWrapper}>
         <div className={styles.starNickname}>{t(nickname)}</div>
 
