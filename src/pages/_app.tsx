@@ -18,7 +18,6 @@ import getLibrary from 'state/provider/getLibrary';
 // import Swiper core and required modules
 import SwiperCore, { Mousewheel, Autoplay } from 'swiper';
 
-
 const SafeHydrate: FunctionComponent = ({ children }) => (
   <div suppressHydrationWarning>
     {typeof window === 'undefined' ? null : children}
