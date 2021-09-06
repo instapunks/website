@@ -100,11 +100,17 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
 
               <H3>{t('After')}</H3>
 
-              <div className={styles.livingArtImgGrid}>
-                <div className={styles.livingArtImgItem}>
-                  <LivingArtItem img="./living-art-02.png" title="" />
-                </div>
-              </div>
+              {/* <div className={styles.livingArtImgGrid}> */}
+              {/* <div className={styles.livingArtImgItem}> */}
+              <LivingArtItem img="./living-art-02.png" title="" />
+              {/* </div> */}
+              {/* </div> */}
+
+              <img
+                src="./top-img-fill.svg"
+                alt="arrow right"
+                className={styles.star}
+              />
             </div>
           </div>
         </div>
