@@ -28,7 +28,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
             <div className="col-12 col-md-6">
               <TextLarge>
                 {t(
-                  'Each Instapunk is unique. However, within 1 year their Instagram alter-egos can request InstaLabs to make one additional NFT for themselves by posting an Instagram story with #MintMeInstapunk hashtag.'
+                  'If your Instagram account is one of the Instapunks you can launch your digital art or merchandise collection free of charge with a single Instagram post. Dozens of international artists will work on your collection to make it perfect. We will cover all design, manufacturing and marketing expenses. We will sell your collection and send you 70% of the revenue in crypto or USD.'
                 )}
               </TextLarge>
             </div>
@@ -36,7 +36,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
             <div className="col-12 col-md-6">
               <TextLarge>
                 {t(
-                  'The new NFT will have a different background color, and both Instapunks will get a special Ethereum texture.'
+                  'To launch your digital art collection, make a post (not a story) on Instagram with #MintMeInstapunk hashtag and tag our corporate account instapunks.eth. Then send a message to instapunks.eth account – we are always online to help you with your collection ideas and sales.'
                 )}
               </TextLarge>
             </div>
@@ -53,7 +53,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
 
                 <TextBold>
                   {t(
-                    'After 1 year no additional minting will be possible and the whole art piece will be complete.'
+                    'You have 100 days to launch your digital art collection. We will invest in its production and marketing'
                   )}
                 </TextBold>
               </div>
@@ -74,7 +74,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
 
               <H3>{t('Before')}</H3>
 
-              <LivingArtItem img="./living-art-01.png" title="Owned by you" />
+              <LivingArtItem img="./living-art-01.png" title="" />
 
               <img
                 src="./top-img.svg"
@@ -98,17 +98,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
 
               <div className={styles.livingArtImgGrid}>
                 <div className={styles.livingArtImgItem}>
-                  <LivingArtItem
-                    img="./living-art-02.png"
-                    title="Owned by you"
-                  />
-                </div>
-
-                <div className={styles.livingArtImgItem}>
-                  <LivingArtItem
-                    img="./living-art-03.png"
-                    title="Owned by @cristiano"
-                  />
+                  <LivingArtItem img="./living-art-02.png" title="" />
                 </div>
               </div>
             </div>

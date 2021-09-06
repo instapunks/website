@@ -26,7 +26,7 @@ export const Top: React.FC<TopProps> = ({ ...props }) => {
           <div className="col-12 col-md-6 offset-md-1">
             <TextLead>
               {t(
-                'Instapunks is a collection of living digital art collectables inspired by 10,000 Instagram influencers. The collection was not randomly generated: each Instapunk was designed by InstaLabs after its real-world alter ego.'
+                'Instapunks is a collection of living digital art collectables inspired by 10,000 Instagram influencers. In addition to aesthetic pleasure, each art piece gives its owner the right to become an official NFT agent for its Instapunk’s alter-ego. NFT agents help celebrities with onboarding and management of their digital merchandise and receive 10% royalty from all sales.'
               )}
             </TextLead>
           </div>

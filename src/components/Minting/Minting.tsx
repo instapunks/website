@@ -30,7 +30,7 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
 
               <TextLarge>
                 {t(
-                  'The costs of minting 1 Instapunk is 0.05 ETH + gas fees. \n The maximum number of mints per transaction is 20. \n At the revelation all Instapunks will be assigned randomly.'
+                  'The costs of minting 1 Instapunk is 0.07 ETH + gas fees. The maximum number of mints per transaction is 5. At the revelation all Instapunks will be assigned randomly.'
                 )}
               </TextLarge>
 

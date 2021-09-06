@@ -53,7 +53,7 @@ export const Roadmap: React.FC<RoadmapProps> = ({ ...props }) => {
                 <div className={styles.roadmapItemText}>
                   <TextLarge>
                     {t(
-                      'Spend 50 ETH on Instagram influencers to promote Instapunks.'
+                      'Spend 100 ETH on Instagram influencers to promote Instapunks.'
                     )}
                   </TextLarge>
                 </div>
