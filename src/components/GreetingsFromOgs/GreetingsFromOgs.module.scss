@@ -4,7 +4,7 @@
   margin-bottom: 70px;
 
   @media (min-width: 1200px) {
-    margin-bottom: 200px;
+    margin-bottom: 110px;
   }
 }
 .greetingsFromOgsHeader {
@@ -31,4 +31,8 @@
   display: flex;
   justify-content: center;
   padding: 24px 0;
+}
+
+.greetingsFromOgsItem {
+  width: 230px;
 }

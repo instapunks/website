@@ -11,7 +11,7 @@ export const NftLine: React.FC<NftLineProps> = ({ ...props }) => {
   return (
     <div className={styles.nftLine} {...props}>
       <div className={styles.nftLineData}>
-        <div>{t('9900 NFTs will be minted for free')}</div>
+        <div>{t('9900 NFTs have alter-egos')}</div>
 
         <div className={styles.nftLineRight}>
           {t('100 NFTs will be auctioned')}

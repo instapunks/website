@@ -50,6 +50,7 @@ export const VideoItem: React.FC<VideoItemProps> = ({
     <div className={styles.videoItem} {...props}>
       <div className={styles.videoItemImgWraper}>
         <ReactPlayer
+          className={styles.videoItemImg}
           url={video}
           ref={videoRef}
           width={200}

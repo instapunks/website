@@ -1,18 +1,22 @@
 @import '../../styles/variables.scss';
 
 .star {
-	flex-shrink: 0;
+  width: 160px;
+  margin-bottom: 12px;
+
+  @media (min-width: 992px) {
+    width: 200px;
+  }
 }
 
 .starsSlider {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	height: 210px;
-	margin-bottom: 70px;
+  position: relative;
+  justify-content: center;
+  height: 210px;
+  margin-bottom: 70px;
 
-	@media(min-width: 992px) {
-		height: 254px;
-		margin-bottom: 307px;
-	}
+  @media (min-width: 992px) {
+    height: 254px;
+    margin-bottom: 120px;
+  }
 }

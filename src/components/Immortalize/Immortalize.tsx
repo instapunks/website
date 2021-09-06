@@ -34,7 +34,7 @@ export const Immortalize: React.FC<ImmortalizeProps> = ({ ...props }) => {
           <div className="col-12 col-md-5 offset-md-1">
             <TextLarge>
               {t(
-                '99% of Instapunks (9900 NFTs) are inspired by top Instagram influencers and leaders, who are followed by millions of people. These NTFs are designed already.'
+                '99% of Instapunks (9900 NFTs) are inspired by top Instagram influencers and leaders, who are followed by millions of people. These NTFs are linked to their Instagram accounts.'
               )}
             </TextLarge>
 

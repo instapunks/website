@@ -3,228 +3,245 @@
 .livingArt {
   margin-bottom: 70px;
 
-	@media(min-width: 992px) {		
-		margin-bottom: 120px;
-	}
-	@media(min-width: 1200px) {		
-		margin-bottom: 200px;
-	}
+  @media (min-width: 992px) {
+    margin-bottom: 120px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 200px;
+  }
 }
 .livingArtHeader {
-	margin-bottom: 18px;
+  margin-bottom: 18px;
 
-	@media(min-width: 992px) {		
-		margin-bottom: 44px;
-	}
+  @media (min-width: 992px) {
+    margin-bottom: 44px;
+  }
 }
 .livingArtText {
-	margin-bottom: 38px;
+  margin-bottom: 38px;
 
-	@media(min-width: 992px) {		
-		margin-bottom: 52px;
-	}
+  @media (min-width: 992px) {
+    margin-bottom: 52px;
+  }
 }
 .livingArtAlert {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 
-	text-align: center;
+  text-align: center;
 
-	border-top: 1px solid;
-	border-bottom: 1px solid;
-	border-image-slice: 1;
-	border-width: 1px;
-	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: radial-gradient(
+    110.62% 152.45% at -5.94% 92.66%,
+    #ffd26d 0%,
+    #f2203e 32.73%,
+    #b729a8 64.85%,
+    #5342d6 100%
+  );
 
-	@media(min-width: 992px) {
-		margin-bottom: 54px;
-	}
+  @media (min-width: 992px) {
+    margin-bottom: 54px;
+  }
 }
 .livingArtAlertBody {
-	position: relative;
+  position: relative;
 
-	padding-top: 18px;
-	padding-left: 14px;
-	padding-right: 14px;
-	padding-bottom: 18px;
+  padding-top: 18px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 18px;
 
-	border-left: 1px solid;
-	border-right: 1px solid;
-	border-image-slice: 1;
-	border-width: 1px;
-	border-image-source: radial-gradient(110.62% 152.45% at -5.94% 92.66%, #FFD26D 0%, #F2203E 32.73%, #B729A8 64.85%, #5342D6 100%);
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: radial-gradient(
+    110.62% 152.45% at -5.94% 92.66%,
+    #ffd26d 0%,
+    #f2203e 32.73%,
+    #b729a8 64.85%,
+    #5342d6 100%
+  );
 }
 .livingArtAlertBody img {
-	position: absolute;
-	top: -20px;
-	right: 20px;
+  position: absolute;
+  top: -20px;
+  right: 20px;
 
-	display: block;
-	width: 40px;
-	height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
 
-	@media(min-width: 992px) {
-		top: -22px;
-		right: 18px;
+  @media (min-width: 992px) {
+    top: -22px;
+    right: 18px;
 
-		width: 46px;
-		height: 46px;
-	}
+    width: 46px;
+    height: 46px;
+  }
 }
-.livingArtBody h3 {
-	margin-bottom: 16px;
 
-	@media(min-width: 768px) {
-		margin-bottom: 20px;
-		padding-top: 5px;
-	}
-	@media(min-width: 992px) {		
-		margin-bottom: 30px;
-		padding-top: 10px;
-	}
+.livingArtHeader h3 {
+  max-width: 800px;
+}
+
+.livingArtBody h3 {
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+    padding-top: 5px;
+  }
+  @media (min-width: 992px) {
+    margin-bottom: 30px;
+    padding-top: 10px;
+  }
 }
 .arrowRight {
-	position: absolute;
+  position: absolute;
 
-	display: block;
-	width: 67px;
-	height: 60px;
+  display: block;
+  width: 67px;
+  height: 60px;
 
-	transform: rotate(90deg);
+  transform: rotate(90deg);
 
-	@media(min-width: 768px) {
-		width: 40px;
-		height: 36px;
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 36px;
 
-		transform: none;		
-	}
-	@media(min-width: 1200px) {
-		width: 88px;
-		height: 80px;		
-	}
+    transform: none;
+  }
+  @media (min-width: 1200px) {
+    width: 88px;
+    height: 80px;
+  }
 }
 .livingArtBodyLeft {
-	position: relative;
+  position: relative;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
 
-	@media(min-width: 768px) {
-		align-items: flex-start;
-		padding-bottom: 0;
-	}
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
 }
 .livingArtBodyLeft .arrowRight {
-	bottom: 22px;
+  bottom: 22px;
 
-	@media(min-width: 768px) {
-		top: 4px;
-		right: 0;
-		bottom: auto;
-	}
-	@media(min-width: 992px) {
-		top: 22px;
-		right: -22px;
-	}
-	@media(min-width: 1200px) {
-		top: -4px;
-		right: -30px;
-	}
+  @media (min-width: 768px) {
+    top: 4px;
+    right: 0;
+    bottom: auto;
+  }
+  @media (min-width: 992px) {
+    top: 22px;
+    right: -22px;
+  }
+  @media (min-width: 1200px) {
+    top: -4px;
+    right: -30px;
+  }
 }
 .livingArtBodyLeft .star {
-	display: none;
+  display: none;
 
-	@media(min-width: 768px) {
-		display: block;
-		width: 100px;
-		margin-top: 30px;
-	}
-	@media(min-width: 992px) {
-		width: 160px;
-		margin-top: 50px;
-	}
+  @media (min-width: 768px) {
+    display: block;
+    width: 100px;
+    margin-top: 30px;
+  }
+  @media (min-width: 992px) {
+    width: 160px;
+    margin-top: 50px;
+  }
 }
 .livingArtBodyCenter {
-	@media(min-width: 768px) {
-		padding-right: 45px;
-	}
+  @media (min-width: 768px) {
+    padding-right: 45px;
+  }
 }
 .livingArtBodyCenter img {
-	display: block;
-	width: 100%;
-	margin: 0 auto;
-	max-width: 226px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 226px;
 
-	@media(min-width: 768px) {
-		max-width: 180px;
-	}
-	@media(min-width: 992px) {
-		max-width: 259px;
-	}
+  @media (min-width: 768px) {
+    max-width: 180px;
+  }
+  @media (min-width: 992px) {
+    max-width: 259px;
+  }
 }
 .livingArtBodyRight {
-	position: relative;
+  position: relative;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
 
-	@media(min-width: 768px) {
-		align-items: flex-end;
-		padding-top: 0;
-	}
+  @media (min-width: 768px) {
+    align-items: flex-end;
+    padding-top: 0;
+  }
 }
 .livingArtBodyRight .arrowRight {
-	top: 22px;
+  top: 22px;
 
-	@media(min-width: 768px) {
-		top: 4px;
-		left: -50px;
-	}
-	@media(min-width: 992px) {
-		top: 22px;
-		left: -40px;
-	}
-	@media(min-width: 1200px) {
-		top: -4px;
-		left: -52px;
-	}
+  @media (min-width: 768px) {
+    top: 4px;
+    left: -50px;
+  }
+  @media (min-width: 992px) {
+    top: 22px;
+    left: -40px;
+  }
+  @media (min-width: 1200px) {
+    top: -4px;
+    left: -52px;
+  }
 }
 .livingArtImgGrid {
-	@media(max-width: 767px) {
-		display: flex;
-		justify-content: center;
-		margin: 0 auto;
-		max-width: 300px;
-	}
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 300px;
+  }
 }
 .livingArtImgItem:first-child {
-	margin-right: 10px;
+  margin-right: 10px;
 
-	@media(min-width: 768px) {
-		margin-right: 0;
-		margin-bottom: 30px;
-	}
+  @media (min-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .livingArtItem {
-	max-width: 160px;
+  max-width: 160px;
 }
 .livingArtItem img {
-	display: block;
-	width: 100%;
-	margin-bottom: 8px;	
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
 }
 .livingArtItemTitle {
-	font-family: $font-main;
-	font-weight: 300;
-	font-size: 14px;
-	line-height: 130%;
-	color: #FFFFFF;
+  font-family: $font-main;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  color: #ffffff;
 
-	@media(min-width: 992px) {
-		font-size: 16px;
-	}
+  @media (min-width: 992px) {
+    font-size: 16px;
+  }
 }

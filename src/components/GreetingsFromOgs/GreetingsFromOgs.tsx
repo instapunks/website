@@ -1,14 +1,13 @@
 import * as React from 'react';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
 import { useTranslation } from 'react-i18next';
 import H3 from 'components/H3/H3';
 import styles from './GreetingsFromOgs.module.scss';
 import VideoItem from 'components/VideoItem/VideoItem';
-import Carousel, {
-  autoplayPlugin,
-  slidesToShowPlugin,
-} from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
 
 type GreetingsFromOgsProps = unknown;
 
@@ -16,25 +15,6 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
   ...props
 }) => {
   const { t } = useTranslation();
-
-  const carouselConfig = (numberOfSlides: number) => ({
-    plugins: [
-      'infinite',
-      'centered',
-      {
-        resolve: autoplayPlugin,
-        options: {
-          interval: 1500,
-        },
-      },
-      {
-        resolve: slidesToShowPlugin,
-        options: {
-          numberOfSlides,
-        },
-      },
-    ],
-  });
 
   const video = (
     name: string,
@@ -92,24 +72,13 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
           </div>
         </div>
         <div className={styles.greetingsFromOgsBody}>
-          <Carousel
-            {...carouselConfig(6)}
-            breakpoints={{
-              400: carouselConfig(1),
-              650: carouselConfig(2),
-              800: carouselConfig(3),
-              1200: carouselConfig(4),
-            }}
-          >
+          <Swiper slidesPerView="auto" centeredSlides={true} spaceBetween={40}>
             {videos.map((props, index) => (
-              <VideoItem
-                key={index}
-                {...props}
-                verified={true}
-                className={styles.greetingsFromOgsItem}
-              />
+              <SwiperSlide key={index} className={styles.greetingsFromOgsItem}>
+                <VideoItem {...props} verified={true} />
+              </SwiperSlide>
             ))}
-          </Carousel>
+          </Swiper>
         </div>
       </div>
     </div>
