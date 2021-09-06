@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Accordion.module.scss';
 import cs from 'clsx';
@@ -15,6 +15,8 @@ type AccordionProps = {
 };
 
 export const Accordion: React.FC<AccordionProps> = ({ items, ...props }) => {
+  const [state, setState] = useState({ open: 0 });
+
   return (
     <div className={styles.accordion} {...props}>
       {items.map((item, index) => (
@@ -22,7 +24,8 @@ export const Accordion: React.FC<AccordionProps> = ({ items, ...props }) => {
           key={index}
           question={item.question}
           answer={item.answer}
-          open={item.open}
+          open={index === state.open}
+          onOpen={() => setState({ open: index })}
         />
       ))}
     </div>
@@ -35,6 +38,7 @@ type AccordionItemProps = {
   question: string;
   answer: string;
   open?: boolean;
+  onOpen: () => void;
 };
 
 const AccordionItem: React.FC<AccordionItemProps> = ({
@@ -50,7 +54,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       className={cs(styles.accordionItem, open && styles.accordionItemOpen)}
       {...props}
     >
-      <div className={styles.question}>
+      <div className={styles.question} onClick={props.onOpen}>
         <TextBold>{t(question)}</TextBold>
 
         <div className={styles.questionIcon}>
