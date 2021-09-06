@@ -1,15 +1,12 @@
+import bankImage from 'assets/images/instaverse/bank.png';
+import daoImage from 'assets/images/instaverse/dao.png';
+import factoryImage from 'assets/images/instaverse/factory.png';
+import spaImage from 'assets/images/instaverse/spa.png';
+import H3 from 'components/H3/H3';
+import { Text } from 'components/Text/Text';
 import * as React from 'react';
-
 import { useTranslation } from 'react-i18next';
 import styles from './Tokenomics.module.scss';
-import { TextBold, Text } from 'components/Text/Text';
-import H3 from 'components/H3/H3';
-import Image from "next/image"
-
-import bankImage from "assets/images/instaverse/bank.png";
-import factoryImage from "assets/images/instaverse/factory.png";
-import spaImage from "assets/images/instaverse/spa.png";
-import daoImage from "assets/images/instaverse/dao.png";
 
 type TokenomicsProps = unknown;
 
