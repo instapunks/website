@@ -1,12 +1,13 @@
 import { ButtonCircle } from 'components/Button/Button';
 import { IconPlay } from 'components/Icon/Icon';
 import * as React from 'react';
+import ReactPlayer from 'react-player';
 
 import { useTranslation } from 'react-i18next';
 import styles from './VideoItem.module.scss';
 
 type VideoItemProps = {
-  img: string;
+  video: string;
   name: string;
   desc: string;
   nickname: string;
@@ -15,7 +16,7 @@ type VideoItemProps = {
 };
 
 export const VideoItem: React.FC<VideoItemProps> = ({
-  img,
+  video,
   name,
   desc,
   nickname,
@@ -23,15 +24,48 @@ export const VideoItem: React.FC<VideoItemProps> = ({
   ...props
 }) => {
   const { t } = useTranslation();
+  const videoRef = React.useRef<ReactPlayer>();
+
+  const [state, setState] = React.useState({
+    playing: false,
+  });
+
+  const handlePlay = React.useCallback(() => {
+    console.log('onPlay');
+    setState({ playing: true });
+  }, [state.playing]);
+
+  const handlePause = React.useCallback(() => {
+    console.log('onPause');
+    setState({ playing: false });
+  }, [state.playing]);
+
+  const handleTogglePlay = React.useCallback(() => {
+    console.log('togglePlay', state);
+    setState({ playing: !state.playing });
+    console.log('togglePlay', state);
+  }, [state.playing]);
 
   return (
     <div className={styles.videoItem} {...props}>
       <div className={styles.videoItemImgWraper}>
-        <img src={img} alt={name} className={styles.videoItemImg} />
+        <ReactPlayer
+          url={video}
+          ref={videoRef}
+          width={200}
+          height={350}
+          playing={state.playing}
+          onPlay={handlePlay}
+          onPause={handlePause}
+        />
 
-        <ButtonCircle>
-          <IconPlay />
-        </ButtonCircle>
+        <div className={styles.videoItemControls} onClick={handleTogglePlay}>
+          {!state.playing && (
+            <ButtonCircle>
+              <IconPlay />
+            </ButtonCircle>
+          )}
+        </div>
       </div>
 
       <div className={styles.videoItemName}>{t(name)}</div>

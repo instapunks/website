@@ -1,60 +1,63 @@
 @import '../../styles/variables.scss';
 
 .videoItem {
-	width: 230px;
+  width: 230px;
 }
 .videoItemImgWraper {
-	position: relative;
-
-	padding-left: 30px;
-	margin-bottom: 16px;
+  position: relative;
+  margin-bottom: 16px;
 }
 .videoItemImg {
-	display: block;
-	width: 100%;
+  display: block;
+  width: 100%;
 }
-.videoItemImgWraper button {
-	position: absolute;
-	top: 50%;
-	left: 0;
+.videoItemControls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-	margin-top: -36px;
-}
 .videoItemName {
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 
-	font-family: $font-second;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 87.19%;
+  font-family: $font-second;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 87.19%;
 
-	background: $color-gradient-title;
+  background: $color-gradient-title;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .videoItemDesc {
-	margin-bottom: 8px;
+  margin-bottom: 8px;
+  white-space: nowrap;
 
-	font-weight: 300;
-	font-size: 16px;
-	line-height: 100%;	
-	color: #8A7BFF
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  color: #8a7bff;
 }
 .videoItemNicknameWrapper {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 .videoItemNickname {
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 100%;
-	color: #FFFFFF;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffff;
 }
 .videoItemVerified {
-	display: block;
-	width: 20px;
-	height: 20px;
-	margin-left: 12px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
 
-	fill: #315EFF;
+  fill: #315eff;
 }

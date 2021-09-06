@@ -36,6 +36,51 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
     ],
   });
 
+  const video = (
+    name: string,
+    desc: string,
+    nickname: string,
+    video: string
+  ) => ({
+    name,
+    desc,
+    nickname: '@' + nickname,
+    video,
+  });
+
+  const videos = [
+    video(
+      'Dean Norris',
+      'Actor - Breaking Bad',
+      'deanjnorris',
+      '/video/Dean Norris.mp4'
+    ),
+    video(
+      'Gabby Douglas',
+      'Olympic Gold Medalist',
+      'gabbycvdouglas',
+      '/video/Gabby Douglas.mp4'
+    ),
+    video(
+      'Nigel Farage',
+      'Leader of the UK Brexit Party',
+      'nigel_farage',
+      '/video/Nigel Farage.mp4'
+    ),
+    video(
+      'Joseph Gannascoli',
+      'Actor - The Sopranos',
+      'josephr.gannascoli',
+      '/video/Joseph Gannascoli.mp4'
+    ),
+    video(
+      'Lindsey Pelas',
+      'Actress, Entrepreneur, Model',
+      'lindseypelas',
+      '/video/Lindsey Pelas.mp4'
+    ),
+  ];
+
   return (
     <div className={styles.greetingsFromOgs} {...props}>
       <div className={styles.greetingsFromOgsHeader}>
@@ -43,32 +88,28 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
           <div className="row">
             <div className="col-12">
               <H3>{t('Greetings from Instapunk OGs')}</H3>
-
-              <div className={styles.greetingsFromOgsBody}>
-                <Carousel
-                  {...carouselConfig(3)}
-                  breakpoints={{
-                    600: carouselConfig(1),
-                    900: carouselConfig(2),
-                  }}
-                >
-                  {Array(3)
-                    .fill(0)
-                    .map((el, index) => (
-                      <VideoItem
-                        key={index}
-                        img="./videoItem-01.png"
-                        name="Dean Norris"
-                        desc="Actor - Breaking Bad"
-                        nickname="@deanjnorris"
-                        verified={true}
-                        className={styles.greetingsFromOgsItem}
-                      />
-                    ))}
-                </Carousel>
-              </div>
             </div>
           </div>
+        </div>
+        <div className={styles.greetingsFromOgsBody}>
+          <Carousel
+            {...carouselConfig(6)}
+            breakpoints={{
+              400: carouselConfig(1),
+              650: carouselConfig(2),
+              800: carouselConfig(3),
+              1200: carouselConfig(4),
+            }}
+          >
+            {videos.map((props, index) => (
+              <VideoItem
+                key={index}
+                {...props}
+                verified={true}
+                className={styles.greetingsFromOgsItem}
+              />
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>

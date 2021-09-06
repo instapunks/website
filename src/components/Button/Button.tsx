@@ -13,7 +13,7 @@ type ButtonProps = {
     | 'buttonCircle'
     | 'buttonCircleWhite'
     | 'buttonCircleOutline';
-};
+} & React.ButtonHTMLAttributes<any>;
 
 export const BaseButton: React.FC<ButtonProps> = ({
   iconLeft,
