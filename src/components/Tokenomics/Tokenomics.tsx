@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next';
 import styles from './Tokenomics.module.scss';
 import { TextBold, Text } from 'components/Text/Text';
 import H3 from 'components/H3/H3';
+import Image from "next/image"
+
+import bankImage from "assets/images/instaverse/bank.png";
+import factoryImage from "assets/images/instaverse/factory.png";
+import spaImage from "assets/images/instaverse/spa.png";
+import daoImage from "assets/images/instaverse/dao.png";
 
 type TokenomicsProps = unknown;
 
@@ -16,7 +22,7 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({ ...props }) => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <H3>{t('INNOVATIVE HOLD-TO-EARN TOKENOMICS')}</H3>
+              <H3>{t('INSTAVERSE')}</H3>
             </div>
           </div>
         </div>
@@ -27,35 +33,41 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({ ...props }) => {
           <div className="col-12">
             <div className={styles.tokenomicsList}>
               <div className={styles.tokenomicsItem}>
-                <H3>{t('USE')}</H3>
-                <TextBold>{t('Personal use, no commercial use.')}</TextBold>
+                <H3>{t('Bank')}</H3>
+                <img className={styles.tokenomicsImage} {...bankImage} />
                 <Text>
                   {t(
-                    'Owning a painting of a famous person does not give you the right to use this person’s image for commercial purposes. You can use your InstaPunks for personal use and trading only.'
+                    'Earn royalties from all Instapunk secondary sales on Opensea, NFT sales made by your Instapunk’s alter-ego, and sales made by your DAO peers.'
                   )}
                 </Text>
               </div>
 
               <div className={styles.tokenomicsItem}>
-                <H3>{t('EARN')}</H3>
-                <TextBold>
-                  {t('Earn ETH just by holding your Instapunk.')}
-                </TextBold>
+                <H3>{t('Factory')}</H3>
+                <img className={styles.tokenomicsImage} {...factoryImage} />
                 <Text>
                   {t(
-                    '5% royalty fees from every sale on Opensea are automatically distributed among all NFT holders proportionally to the number of NFTs they hold. 5% fees goes to the team.'
+                    'Help celebrities with onboarding and start selling their digital art, merchandize and content in 24 hours.'
                   )}
                 </Text>
               </div>
 
               <div className={styles.tokenomicsItem}>
-                <H3>{t('RULE')}</H3>
-                <TextBold>
-                  {t('Decide on the future of the art via PunkDAO.')}
-                </TextBold>
+                <H3>{t('SPA')}</H3>
+                <img className={styles.tokenomicsImage} {...spaImage} />
                 <Text>
                   {t(
-                    'Should InstaPunks “age” over time like their alter egos? Can new InstaPunks ever be minted? All NFT holders can collectively shape the future of this art project.'
+                    'Pamper your Instapunk with superior treatment and care provided by our make-up artists.'
+                  )}
+                </Text>
+              </div>
+
+              <div className={styles.tokenomicsItem}>
+                <H3>{t('DAO')}</H3>
+                <img className={styles.tokenomicsImage} {...daoImage} />
+                <Text>
+                  {t(
+                    'NFT holders collectively decide on the future of this art project, and form DAOs to work in teams and share profits.'
                   )}
                 </Text>
               </div>
