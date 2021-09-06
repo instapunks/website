@@ -12,6 +12,7 @@ type StarsSliderProps = unknown;
 
 const star = (name: string, insta: string) => ({ name, insta });
 const stars = [
+  star('Kylie jenner', '@kyliejenner'),
   star('Cristiano ronaldo', '@cristiano'),
   star('Selena gomez', '@selenagomez'),
   star('Jason statham', '@jasonstatham'),
@@ -19,7 +20,6 @@ const stars = [
   star('Ariana grande', '@arianagrande'),
   star('Keanu reeves', '@keanureeves'),
   star('Kim kardashian', '@kimkardashian'),
-  star('Kylie jenner', '@kyliejenner'),
   star('Mike tyson', '@miketyson'),
 ];
 
@@ -31,7 +31,6 @@ export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
       mousewheel={true}
       spaceBetween={20}
       className={styles.starsSlider}
-      initialSlide={4}
       loop={true}
     >
       {stars.map(({ name, insta }, index) => (
