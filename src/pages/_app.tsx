@@ -15,11 +15,17 @@ import 'styles/globals.scss';
 import { Web3ReactProvider } from '@web3-react/core';
 import getLibrary from 'state/provider/getLibrary';
 
+// import Swiper core and required modules
+import SwiperCore, { Mousewheel, Autoplay } from 'swiper';
+
+
 const SafeHydrate: FunctionComponent = ({ children }) => (
   <div suppressHydrationWarning>
     {typeof window === 'undefined' ? null : children}
   </div>
 );
+// install Swiper modules
+SwiperCore.use([Mousewheel, Autoplay]);
 
 export const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <SafeHydrate>
