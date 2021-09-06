@@ -24,85 +24,34 @@ const stars = [
 ];
 
 export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
+  const carouselConfig = (numberOfSlides: number) => ({
+    plugins: [
+      'infinite',
+      'centered',
+      {
+        resolve: autoplayPlugin,
+        options: {
+          interval: 1500,
+        },
+      },
+      {
+        resolve: slidesToShowPlugin,
+        options: {
+          numberOfSlides,
+        },
+      },
+    ],
+  });
   return (
     <div className={styles.starsSlider} {...props}>
       <Carousel
-        plugins={[
-          'infinite',
-          {
-            resolve: autoplayPlugin,
-            options: {
-              interval: 1500,
-            },
-          },
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: 6,
-            },
-          },
-        ]}
+        {...carouselConfig(6)}
         breakpoints={{
-          340: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 1,
-                },
-              },
-            ],
-          },
-          480: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 2,
-                },
-              },
-            ],
-          },
-          800: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 3,
-                },
-              },
-            ],
-          },
-          1000: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 4,
-                },
-              },
-            ],
-          },
-          1200: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 5,
-                },
-              },
-            ],
-          },
-          1400: {
-            plugins: [
-              {
-                resolve: slidesToShowPlugin,
-                options: {
-                  numberOfSlides: 6,
-                },
-              },
-            ],
-          },
+          340: carouselConfig(1),
+          480: carouselConfig(2),
+          800: carouselConfig(3),
+          1000: carouselConfig(4),
+          1200: carouselConfig(5),
         }}
         animationSpeed={500}
       >
