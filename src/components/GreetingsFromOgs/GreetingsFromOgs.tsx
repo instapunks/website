@@ -77,10 +77,6 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
             centeredSlides={true}
             spaceBetween={40}
             mousewheel={true}
-            autoplay={{
-              delay: 500,
-              disableOnInteraction: true,
-            }}
             loop={true}
             initialSlide={3}
           >
