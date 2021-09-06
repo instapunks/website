@@ -149,17 +149,20 @@
     right: -30px;
   }
 }
-.livingArtBodyLeft .star {
-  display: none;
+.livingArtBodyRight,
+.livingArtBodyLeft {
+  .star {
+    display: none;
 
-  @media (min-width: 768px) {
-    display: block;
-    width: 100px;
-    margin-top: 30px;
-  }
-  @media (min-width: 992px) {
-    width: 160px;
-    margin-top: 50px;
+    @media (min-width: 768px) {
+      display: block;
+      width: 100px;
+      margin-top: 30px;
+    }
+    @media (min-width: 992px) {
+      width: 160px;
+      margin-top: 50px;
+    }
   }
 }
 .livingArtBodyCenter {
