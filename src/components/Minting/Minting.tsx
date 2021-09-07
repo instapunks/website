@@ -18,6 +18,27 @@ type MintingProps = unknown;
 export const Minting: React.FC<MintingProps> = ({ ...props }) => {
   const { t } = useTranslation();
 
+  const [amount, setAmount] = React.useState(1);
+  const [checked, setChecked] = React.useState(true);
+
+  const handleIncrement = React.useCallback(() => {
+    setAmount(Math.max(1, Math.min(5, amount + 1)));
+  }, [setAmount, amount]);
+
+  const handleDecrement = React.useCallback(() => {
+    setAmount(Math.max(1, Math.min(5, amount - 1)));
+  }, [setAmount, amount]);
+
+  const handleChange = React.useCallback(
+    (next: string) => {
+      const num = +next;
+      if (!Number.isNaN(num)) {
+        setAmount(num);
+      }
+    },
+    [setAmount, amount]
+  );
+
   return (
     <div className={styles.minting} {...props}>
       <div className="container">
@@ -34,16 +55,16 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
                 )}
               </TextLarge>
 
-              <div className={styles.mintingSum}>{t('800/10,000 LEFT')}</div>
+              <div className={styles.mintingSum}>9900 {t('LEFT')}</div>
 
               <div className={styles.mintingQuantity}>
-                <ButtonCircleOutline>
+                <ButtonCircleOutline onClick={handleDecrement}>
                   <BtnMinus />
                 </ButtonCircleOutline>
 
-                <Input value="2" />
+                <Input value={amount.toString()} onChange={handleChange} />
 
-                <ButtonCircleOutline>
+                <ButtonCircleOutline onClick={handleIncrement}>
                   <BtnPlus />
                 </ButtonCircleOutline>
               </div>
@@ -53,7 +74,7 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
               </div>
 
               <div className={styles.mintingQuantityAgree}>
-                <Checkbox name="agree" text="Agree with Terms and Conditions" />
+                <Checkbox checked={checked} name="agree" text="Agree with Terms and Conditions" />
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ type InputProps = {
   value?: string;
   placeholder?: string;
   status?: string;
+  onChange?: (v: string) => void;
   type?: 'inputLeft';
 };
 
@@ -15,6 +16,7 @@ export const BaseInput: React.FC<InputProps> = ({
   placeholder,
   status,
   type,
+  onChange,
   ...props
 }) => {
   let statusStyle = '';
@@ -37,6 +39,7 @@ export const BaseInput: React.FC<InputProps> = ({
       className={statusStyle}
       value={value}
       placeholder={placeholder}
+      onChange={ev => onChange(ev.target.value)}
       {...props}
     />
   );
