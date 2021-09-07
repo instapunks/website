@@ -17,6 +17,20 @@ import Footer from 'components/Footer/Footer';
 import MenuMobile from 'components/MenuMobile/MenuMobile';
 import StarsSlider from 'components/StarsSlider/StarsSlider';
 
+import Img1 from 'assets/images/punks/Img1.png';
+import Img2 from 'assets/images/punks/Img2.png';
+import Img3 from 'assets/images/punks/Img3.png';
+import Img4 from 'assets/images/punks/Img4.png';
+import Img5 from 'assets/images/punks/Img5.png';
+import Img6 from 'assets/images/punks/Img6.png';
+import Img7 from 'assets/images/punks/Img7.png';
+import Img8 from 'assets/images/punks/Img8.png';
+import Img9 from 'assets/images/punks/Img9.png';
+import Img10 from 'assets/images/punks/Img10.png';
+import Img11 from 'assets/images/punks/Img11.png';
+import Img12 from 'assets/images/punks/Img12.png';
+import Img13 from 'assets/images/punks/Img13.png';
+
 export const Home: React.FunctionComponent = () => {
   return (
     <div className="wrapper">
@@ -32,71 +46,71 @@ export const Home: React.FunctionComponent = () => {
       <GlobalAuction
         items={[
           {
-            img: '/cr/paloma3.jpg',
+            img: Img1.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iVitalik.jpg',
+            img: Img2.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iVignesh.jpg',
+            img: Img3.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/itrevor.png',
+            img: Img4.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
           },
           {
-            img: '/cr/iSam.jpg',
-            name: 'Vitalik Buterin',
-            nickname: '@vitalik_buterin',
-            verified: true,
-          },
-          {
-            img: '/cr/iPranksy.jpg',
+            img: Img5.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iJustin.jpg',
+            img: Img6.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iGary.jpg',
-            name: 'Vitalik Buterin',
-            nickname: '@vitalik_buterin',
-          },
-          {
-            img: '/cr/ifewocious.png',
+            img: Img7.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iDH.jpg',
+            img: Img8.src,
+            name: 'Vitalik Buterin',
+            nickname: '@vitalik_buterin',
+          },
+          {
+            img: Img9.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iCZ.jpg',
+            img: Img10.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
             verified: true,
           },
           {
-            img: '/cr/iblake.jpg',
+            img: Img11.src,
+            name: 'Vitalik Buterin',
+            nickname: '@vitalik_buterin',
+            verified: true,
+          },
+          {
+            img: Img12.src,
             name: 'Vitalik Buterin',
             nickname: '@vitalik_buterin',
           },

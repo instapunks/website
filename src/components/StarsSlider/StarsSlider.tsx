@@ -1,5 +1,16 @@
 import * as React from 'react';
 
+import Ariana from 'assets/images/stars/Ariana.png';
+import Cristiano from 'assets/images/stars/Cristiano.png';
+import Jason from 'assets/images/stars/Jason.png';
+import Keanu from 'assets/images/stars/Keanu.png';
+import Kim from 'assets/images/stars/Kim.png';
+import Kylie from 'assets/images/stars/Kylie.png';
+import Mike from 'assets/images/stars/Mike.png';
+import Paris from 'assets/images/stars/Paris.png';
+import Rock from 'assets/images/stars/Rock.png';
+import Selena from 'assets/images/stars/Selena.png';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -10,17 +21,21 @@ import Star from 'components/Star/Star';
 
 type StarsSliderProps = unknown;
 
-const star = (name: string, insta: string) => ({ name, insta });
+const star = (name: string, insta: string, image: StaticImageData) => ({
+  name,
+  insta,
+  image,
+});
 const stars = [
-  star('Kylie jenner', '@kyliejenner'),
-  star('Cristiano ronaldo', '@cristiano'),
-  star('Selena gomez', '@selenagomez'),
-  star('Jason statham', '@jasonstatham'),
-  star('Dwayne Douglas', '@therock'),
-  star('Ariana grande', '@arianagrande'),
-  star('Keanu reeves', '@keanureeves'),
-  star('Kim kardashian', '@kimkardashian'),
-  star('Mike tyson', '@miketyson'),
+  star('Kylie jenner', '@kyliejenner', Kylie),
+  star('Cristiano ronaldo', '@cristiano', Cristiano),
+  star('Selena gomez', '@selenagomez', Selena),
+  star('Jason statham', '@jasonstatham', Jason),
+  star('Dwayne Douglas', '@therock', Rock),
+  star('Ariana grande', '@arianagrande', Ariana),
+  star('Keanu reeves', '@keanureeves', Keanu),
+  star('Kim kardashian', '@kimkardashian', Kim),
+  star('Mike tyson', '@miketyson', Mike),
 ];
 
 export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
@@ -33,14 +48,9 @@ export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
       className={styles.starsSlider}
       loop={true}
     >
-      {stars.map(({ name, insta }, index) => (
+      {stars.map(({ name, insta, image }) => (
         <SwiperSlide key={insta} className={styles.star}>
-          <Star
-            img={`./star-${('0' + (index + 1)).substr(-2)}.png`}
-            name={name}
-            nickname={insta}
-            verified={true}
-          />
+          <Star img={image.src} name={name} nickname={insta} verified={true} />
         </SwiperSlide>
       ))}
     </Swiper>
