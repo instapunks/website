@@ -74,7 +74,11 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
               </div>
 
               <div className={styles.mintingQuantityAgree}>
-                <Checkbox checked={checked} name="agree" text="Agree with Terms and Conditions" />
+                <Checkbox
+                  checked={checked}
+                  name="agree"
+                  text="Agree with Terms and Conditions"
+                />
               </div>
             </div>
           </div>
@@ -83,29 +87,19 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
 
       <div className={styles.mintingLine}>
         <div className={styles.mintingLineItem}>
-          <TextLarge>
-            4:00 pm ET on the 9th of September, 2021
-          </TextLarge>
+          <TextLarge>4:00 pm ET on the 9th of September, 2021</TextLarge>
         </div>
         <div className={styles.mintingLineItem}>
-          <TextLarge>
-            4:00 pm ET on the 9th of September, 2021
-          </TextLarge>
+          <TextLarge>4:00 pm ET on the 9th of September, 2021</TextLarge>
         </div>
         <div className={styles.mintingLineItem}>
-          <TextLarge>
-            4:00 pm ET on the 9th of September, 2021
-          </TextLarge>
+          <TextLarge>4:00 pm ET on the 9th of September, 2021</TextLarge>
         </div>
         <div className={styles.mintingLineItem}>
-          <TextLarge>
-            4:00 pm ET on the 9th of September, 2021
-          </TextLarge>
+          <TextLarge>4:00 pm ET on the 9th of September, 2021</TextLarge>
         </div>
         <div className={styles.mintingLineItem}>
-          <TextLarge>
-            4:00 pm ET on the 9th of September, 2021
-          </TextLarge>
+          <TextLarge>4:00 pm ET on the 9th of September, 2021</TextLarge>
         </div>
       </div>
     </div>
