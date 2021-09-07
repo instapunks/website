@@ -34,7 +34,7 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({ ...props }) => {
                 <img className={styles.tokenomicsImage} {...bankImage} />
                 <Text>
                   {t(
-                    'Earn royalties from all Instapunk secondary sales on Opensea, NFT sales made by your Instapunk’s alter-ego, and sales made by your DAO peers.'
+                    'Earn royalties from all Instapunk secondary sales on Opensea and NFT sales made by your Instapunk’s alter-egos. '
                   )}
                 </Text>
               </div>
