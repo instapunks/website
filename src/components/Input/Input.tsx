@@ -39,7 +39,7 @@ export const BaseInput: React.FC<InputProps> = ({
       className={statusStyle}
       value={value}
       placeholder={placeholder}
-      onChange={ev => onChange(ev.target.value)}
+      onChange={(ev) => (onChange ? onChange(ev.target.value) : false)}
       {...props}
     />
   );

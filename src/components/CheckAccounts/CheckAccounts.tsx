@@ -47,9 +47,9 @@ export const CheckAccounts: React.FC<CheckAccountsProps> = ({ ...props }) => {
                     <ButtonLarge disabled={true}>{t('Check')}</ButtonLarge>
                   </div>
 
-                  <div className={styles.checkAccountsFormErrMsg}>
+                  {/* <div className={styles.checkAccountsFormErrMsg}>
                     {t('Incorrect login')}
-                  </div>
+                  </div> */}
                 </form>
               </div>
 

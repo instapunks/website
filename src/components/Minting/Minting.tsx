@@ -70,7 +70,7 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
               </div>
 
               <div className={styles.mintingQuantitySubmit}>
-                <ButtonLarge>{t('Mint now')}</ButtonLarge>
+                <ButtonLarge disabled>{t('Mint now')}</ButtonLarge>
               </div>
 
               <div className={styles.mintingQuantityAgree}>
