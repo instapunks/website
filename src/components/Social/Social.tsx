@@ -9,26 +9,20 @@ export const Social: React.FC<SocialProps> = ({ ...props }) => {
   return (
     <ul className={styles.social} {...props}>
       <li className={styles.socialItem}>
-        <a href="soc" className={styles.socialLink}>
+        <a href="https://www.instagram.com/instapunks.eth" className={styles.socialLink}>
           <IconInst />
         </a>
       </li>
 
       <li className={styles.socialItem}>
-        <a href="soc" className={styles.socialLink}>
+        <a href="https://discord.gg/3Xs5Qr3yMf" className={styles.socialLink}>
           <IconDesc />
         </a>
       </li>
 
       <li className={styles.socialItem}>
-        <a href="soc" className={styles.socialLink}>
+        <a href="https://twitter.com/instapunks" className={styles.socialLink}>
           <IconTw />
-        </a>
-      </li>
-
-      <li className={styles.socialItem}>
-        <a href="soc" className={styles.socialLink}>
-          <IconTg />
         </a>
       </li>
     </ul>
