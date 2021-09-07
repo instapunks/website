@@ -19,11 +19,11 @@ export const Header: React.FC<HeaderProps> = ({ ...props }) => {
           <div className="col-12">
             <div className={styles.headerBody}>
               <div className={styles.headerHamburger}>
-                <Hamburger />
+                {/* <Hamburger /> */}
               </div>
 
               <div className={styles.headerMenu}>
-                <Menu items={['Story', 'Roadmap', 'FAQ']} />
+                {/* <Menu items={['Story', 'Roadmap', 'FAQ']} /> */}
               </div>
 
               <div className={styles.headerRight}>
