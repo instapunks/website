@@ -18,8 +18,15 @@ export const Top: React.FC<TopProps> = ({ ...props }) => {
         <div className="row">
           <div className={cs(styles.topHeader, 'col-12')}>
             <H1>
+              {t('INSTAPUNKS')}
+            </H1>
+          </div>
+          <div className={cs(styles.topHeaderMobile, 'col-12')}>
+            <H1>
               {t('INSTA')}
-              <span className={styles.topWordBreak}>{t('PUNKS')}</span>
+            </H1>
+            <H1>
+              {t('PUNKS')}
             </H1>
           </div>
 

@@ -9,23 +9,36 @@
 	position: relative;
 	z-index: 1;
 }
-.topHeader {
+.topHeaderMobile {
+	position: relative;
 	margin-bottom: 17px;
 
+	@media(min-width: 768px) {
+		display: none;
+	}
+
+	h1 {
+		display: block;
+	}
+}
+
+.topHeader {
+	position: relative;
+	margin-bottom: 17px;
+	display: none;
+
+	@media(min-width: 768px) {
+		display: block;
+	}
 	@media(min-width: 992px) {
+		display: none;
 		margin-bottom: 25px;
 	}
 	@media(min-width: 1200px) {
 		margin-bottom: 45px;
 	}
 }
-.topWordBreak {
-	display: block;
 
-	@media(min-width: 768px) {
-		display: inline;
-	}
-}
 .topImg {
 	position: absolute;
 	top: 3px;
