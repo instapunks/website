@@ -47,14 +47,13 @@ type Props = {
 };
 
 export const Wallet = () => {
-  const {
-    active,
-    error,
-    activate,
-    chainId,
-    account,
-    setError,
-  } = useWeb3React();
+  const web3 = useWeb3React();
+  const active = web3.active;
+  const error = web3.error;
+  const activate = web3.activate;
+  const chainId = web3.chainId;
+  const account = web3.account;
+  const setError = web3.setError;
 
   const triedToEagerConnect = useEagerConnect();
 
