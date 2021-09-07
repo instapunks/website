@@ -118,7 +118,7 @@ export const Home: React.FunctionComponent = () => {
       />
       <Minting />
       <Roadmap />
-      <CheckAccounts />
+      {/* <CheckAccounts /> */}
       <Faq />
       <Footer />
       <MenuMobile />
