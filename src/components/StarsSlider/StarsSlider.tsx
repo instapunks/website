@@ -36,6 +36,7 @@ const stars = [
   star('Keanu reeves', '@keanureeves', Keanu),
   star('Kim kardashian', '@kimkardashian', Kim),
   star('Mike tyson', '@miketyson', Mike),
+  star('Paris Hilton', '@parishilton', Paris),
 ];
 
 export const StarsSlider: React.FC<StarsSliderProps> = ({ ...props }) => {
