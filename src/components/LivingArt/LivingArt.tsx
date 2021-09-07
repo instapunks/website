@@ -1,11 +1,11 @@
-import * as React from 'react';
-
-import { useTranslation } from 'react-i18next';
 import cs from 'clsx';
-import H2 from 'components/H2/H2';
-import styles from './LivingArt.module.scss';
-import { TextBold, TextLarge } from 'components/Text/Text';
 import H3 from 'components/H3/H3';
+import { TextBold, TextLarge } from 'components/Text/Text';
+import * as React from 'react';
+import { useTranslation } from 'react-i18next';
+import styles from './LivingArt.module.scss';
+import After from 'assets/images/cristiano-after.png';
+import Before from 'assets/images/cristiano-before.png';
 
 type LivingArtProps = unknown;
 
@@ -78,7 +78,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
 
               <H3>{t('Before')}</H3>
 
-              <LivingArtItem img="./living-art-01.png" title="" />
+              <LivingArtItem img={Before.src} title="" />
 
               <img
                 src="./top-img.svg"
@@ -99,13 +99,7 @@ export const LivingArt: React.FC<LivingArtProps> = ({ ...props }) => {
               />
 
               <H3>{t('After')}</H3>
-
-              {/* <div className={styles.livingArtImgGrid}> */}
-              {/* <div className={styles.livingArtImgItem}> */}
-              <LivingArtItem img="./living-art-02.png" title="" />
-              {/* </div> */}
-              {/* </div> */}
-
+              <LivingArtItem img={After.src} title="" />
               <img
                 src="./top-img-fill.svg"
                 alt="arrow right"
