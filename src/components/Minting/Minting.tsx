@@ -84,31 +84,27 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
       <div className={styles.mintingLine}>
         <div className={styles.mintingLineItem}>
           <TextLarge>
-            {t('Minting will star at 4:00 pm ET on the 1st of September 2021')}
+            4:00 pm ET on the 9th of September, 2021
           </TextLarge>
         </div>
-
         <div className={styles.mintingLineItem}>
           <TextLarge>
-            {t('Minting will star at 4:00 pm ET on the 1st of September 2021')}
+            4:00 pm ET on the 9th of September, 2021
           </TextLarge>
         </div>
-
         <div className={styles.mintingLineItem}>
           <TextLarge>
-            {t('Minting will star at 4:00 pm ET on the 1st of September 2021')}
+            4:00 pm ET on the 9th of September, 2021
           </TextLarge>
         </div>
-
         <div className={styles.mintingLineItem}>
           <TextLarge>
-            {t('Minting will star at 4:00 pm ET on the 1st of September 2021')}
+            4:00 pm ET on the 9th of September, 2021
           </TextLarge>
         </div>
-
         <div className={styles.mintingLineItem}>
           <TextLarge>
-            {t('Minting will star at 4:00 pm ET on the 1st of September 2021')}
+            4:00 pm ET on the 9th of September, 2021
           </TextLarge>
         </div>
       </div>
