@@ -77,8 +77,9 @@ export const Minting: React.FC<MintingProps> = ({ ...props }) => {
                 <Checkbox
                   checked={checked}
                   name="agree"
-                  text="Agree with Terms and Conditions"
+                  text="Agree with "
                 />
+                <a href="/terms-and-conditions.pdf" target="_blank" className={styles.mintingTerms}>Terms and Conditions</a>
               </div>
             </div>
           </div>
