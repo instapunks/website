@@ -59,6 +59,12 @@ export const GreetingsFromOgs: React.FC<GreetingsFromOgsProps> = ({
       'lindseypelas',
       '/video/Lindsey Pelas.mp4'
     ),
+    video(
+      'Lena Headey',
+      'Actress - Games of Thrones',
+      'iamlenaheadey',
+      '/video/Lena Headey.mp4'
+    ),
   ];
 
   return (
